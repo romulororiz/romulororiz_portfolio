@@ -30,3 +30,9 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+### Sass ###
+.sass-cache/
+/styles/css/*.css.map
+*.sass.map
+/styles/scss/*.scss.map
