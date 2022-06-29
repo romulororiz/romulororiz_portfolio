@@ -1,0 +1,49 @@
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flexEnd {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+// Button
+@mixin button {
+	display: inline-block;
+    margin-left: 30px;
+    font-size: $font-lg;
+    padding: 15px 25px;
+    background-color: transparent;
+    border-radius: $border-radius;
+    border: 1px solid $malachite-green;
+    color: $malachite-green;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	-webkit-border-radius: $border-radius;
+	-moz-border-radius: $border-radius;
+	border-radius: $border-radius;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    transition: $transition;
+    
+	    &:hover {
+        background-color: rgba($malachite-green, .10);
+    }
+	&:active {
+		position: relative;
+		top: 2px;
+	}
+}

@@ -16,3 +16,9 @@ export const Layout = ({ title, description, keywords, children }) => {
 		</>
 	);
 };
+
+Layout.defaultProps = {
+	title: 'Rômulo Roriz',
+	description: 'Personal Website',
+	keywords: 'Web Development, Frontend, Javascript, HTML5, CSS, Sass, NextJs',
+};

@@ -21,10 +21,10 @@ module.exports = {
 	],
 
 	navLinks: [
-		{
-			name: 'Home',
-			url: '/',
-		},
+		// {
+		// 	name: 'Home',
+		// 	url: '/',
+		// },
 		{
 			name: 'About',
 			url: '/#about',
@@ -33,9 +33,14 @@ module.exports = {
 			name: 'Experience',
 			url: '/#experience',
 		},
+
 		{
 			name: 'Work',
 			url: '/#work',
+		},
+		{
+			name: 'Tech Stack',
+			url: '/#tech-stack',
 		},
 		{
 			name: 'Contact',

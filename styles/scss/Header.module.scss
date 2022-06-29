@@ -1,0 +1,79 @@
+@import 'mixins', 'variables';
+
+.header {
+    @include flexBetween;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    position: fixed;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+    font-size: $font-md;
+    font-family: $font-mono;
+    height: $header-height;
+    padding: 0 50px;
+
+    .logo_wrapper {
+      width: 250px;
+
+      h1 {
+        color: $malachite-green;
+        pointer-events: none;
+        user-select: none;
+      }
+    }
+
+    ol {
+      @include flexEnd;
+      list-style-type: none;
+      counter-reset: li;
+      width: 60%;
+      height: 100%;
+
+     
+
+      a { 
+        color: $light-slate;
+        font-weight: 400;
+        transition: $transition;
+
+          &:hover {
+            color: $malachite-green;
+        }
+
+      }
+
+      li {
+        margin: 0 30px;
+        counter-increment: li;
+      }
+
+      li:last-of-type {
+        margin-right: 0;
+      }
+
+      li::before {
+        content: '0' counter(li) '.';
+        margin-right: 5px;
+        color: $malachite-green;
+      }
+
+      .resume_btn {
+        @include button;
+        // background-color: red;
+        // margin-left: 30px;
+        // font-size: $font-lg;
+        // padding: 15px 25px;
+        // background-color: transparent;
+        // border-radius: $border-radius;
+        // border: 1px solid $malachite-green;
+        // color: $malachite-green;
+        // transition: $transition;
+          
+        //   &:hover {
+        //     background-color: rgba($malachite-green, .10);
+        //   }
+      }
+    }
+    
+}
