@@ -6,9 +6,7 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint",
-		"sass-dev": "sass --watch --update --style=expanded styles/scss:styles/css",
-		"sass-prod": "sass --no-source-map --style=compressed styles/scss:styles/css"
+		"lint": "next lint"
 	},
 	"dependencies": {
 		"next": "12.1.6",
