@@ -6,38 +6,40 @@ import { useEffect, useState } from 'react';
 const logo = `<romuloR />`;
 
 const Header = () => {
-	const [scrollTop, setScrollTop] = useState(0);
+	const [scrollTop, setScrollTop] = useState(true);
 
-	console.log(scrollTop);
+	const handleScroll = () => {
+		setScrollTop(document.documentElement.scrollTop < 50);
+	};
 
 	useEffect(() => {
-		if (typeof window !== undefined) {
-			window.addEventListener('scroll', () => {
-				if (document.documentElement.scrollTop > 50) {
-					setScrollTop(true);
-				}
-			});
-		}
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
 	}, []);
+
+	console.log(scrollTop);
 
 	return (
 		<div className={styles.header}>
 			<div className={styles.logo_wrapper}>
 				<h1>{logo}</h1>
 			</div>
-			<ol>
-				{navLinks &&
-					navLinks.map(({ url, name }, i) => (
-						<li key={i}>
-							<Link href={url}>{name}</Link>
-						</li>
-					))}
-				<button className={styles.resume_btn}>
-					<a href='#' rel='noopener noreferrer'>
-						Resume
-					</a>
-				</button>
-			</ol>
+			<div>
+				<ol>
+					{navLinks &&
+						navLinks.map(({ url, name }, i) => (
+							<li key={i}>
+								<Link href={url}>{name}</Link>
+							</li>
+						))}
+				</ol>
+				<a className={styles.btn} href='#' rel='noopener noreferrer'>
+					Resume
+				</a>
+			</div>
 		</div>
 	);
 };

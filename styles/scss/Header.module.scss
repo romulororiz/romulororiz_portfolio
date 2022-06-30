@@ -7,8 +7,7 @@
     z-index: 10;
     position: fixed;
     backdrop-filter: blur(10px);
-    transition: var(--transition);
-    font-size: $font-md;
+    font-size: $font-sm;
     font-family: $font-mono;
     height: $header-height;
     padding: 0 50px;
@@ -23,14 +22,14 @@
       }
     }
 
+    div:nth-child(2) {
+      display: flex;
+    }
+
     ol {
       @include flexEnd;
       list-style-type: none;
       counter-reset: li;
-      width: 60%;
-      height: 100%;
-
-     
 
       a { 
         color: $light-slate;
@@ -40,11 +39,10 @@
           &:hover {
             color: $malachite-green;
         }
-
       }
 
       li {
-        margin: 0 30px;
+        margin: 0 25px;
         counter-increment: li;
       }
 
@@ -57,23 +55,15 @@
         margin-right: 5px;
         color: $malachite-green;
       }
-
-      .resume_btn {
-        @include button;
-        // background-color: red;
-        // margin-left: 30px;
-        // font-size: $font-lg;
-        // padding: 15px 25px;
-        // background-color: transparent;
-        // border-radius: $border-radius;
-        // border: 1px solid $malachite-green;
-        // color: $malachite-green;
-        // transition: $transition;
-          
-        //   &:hover {
-        //     background-color: rgba($malachite-green, .10);
-        //   }
-      }
     }
+
+    .btn {
+      @include btnTheme(transparent, $malachite-green, $font-md, 500, $malachite-green);
+      margin-left: 25px;
+
+      &:hover {
+        background-color: rgba($malachite-green, .25);
+    }
+  }
     
 }

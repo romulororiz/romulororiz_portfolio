@@ -1,3 +1,4 @@
+@import 'variables';
 
 @mixin flexCenter {
     display: flex;
@@ -17,33 +18,22 @@
     align-items: center;
 }
 
-// Button
-@mixin button {
-	display: inline-block;
-    margin-left: 30px;
-    font-size: $font-lg;
+@mixin btnTheme($backgroundColor, $btnColor, $fontSize, $fontWeight, $textColor) {
+    background-color: $backgroundColor;
     padding: 15px 25px;
-    background-color: transparent;
+    display: inline-block;
     border-radius: $border-radius;
-    border: 1px solid $malachite-green;
-    color: $malachite-green;
-	outline: none;
-	cursor: pointer;
-	text-align: center;
-	-webkit-border-radius: $border-radius;
+    border: 1px solid $btnColor;
+    -webkit-border-radius: $border-radius;
 	-moz-border-radius: $border-radius;
-	border-radius: $border-radius;
-	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-	box-shadow: 0 1px 2px rgba(0,0,0,.2);
-	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    outline: none;
+	cursor: pointer;
     transition: $transition;
-    
-	    &:hover {
-        background-color: rgba($malachite-green, .10);
+    color: $malachite-green;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+
+    &:hover {
+        background-color: lighten($backgroundColor, 5%);
     }
-	&:active {
-		position: relative;
-		top: 2px;
-	}
 }
