@@ -20,7 +20,7 @@
 
 @mixin btnTheme($backgroundColor, $btnColor, $fontSize, $fontWeight, $textColor) {
     background-color: $backgroundColor;
-    padding: 15px 25px;
+    padding: 10px 20px;
     display: inline-block;
     border-radius: $border-radius;
     border: 1px solid $btnColor;
@@ -35,5 +35,80 @@
 
     &:hover {
         background-color: lighten($backgroundColor, 5%);
+    }
+}
+
+@mixin headerNav() {
+    @include flexBetween;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    position: fixed;
+    font-size: $font-sm;
+    font-family: $font-mono;
+    height: $header-height;
+    transition: $transition;
+    padding: 0 50px;
+
+    @media ($desktopM) {
+        padding: 0 40px;
+    }
+
+    @media ($mobileL) {
+        padding: 0 20px;
+    }
+
+    .logo_wrapper {
+        width: 250px;
+
+        h1 {
+        color: $malachite-green;
+        pointer-events: none;
+        user-select: none;
+        }
+    }
+
+    div:nth-child(2) {
+        display: flex;
+    }
+
+    ol {
+        @include flexEnd;
+        list-style-type: none;
+        counter-reset: li;
+
+        a { 
+        color: $lightest-slate;
+        font-weight: 400;
+        transition: $transition;
+
+            &:hover {
+            color: $malachite-green;
+        }
+        }
+
+        li {
+        margin: 0 20px;
+        counter-increment: li;
+        }
+
+        li:last-of-type {
+        margin-right: 0;
+        }
+
+        li::before {
+        content: '0' counter(li) '.';
+        margin-right: 5px;
+        color: $malachite-green;
+        }
+    }
+
+    .btn {
+        @include btnTheme(transparent, $malachite-green, $font-md, 500, $malachite-green);
+        margin-left: 20px;
+
+            &:hover {
+            background-color: rgba($malachite-green, .25);
+        }
     }
 }

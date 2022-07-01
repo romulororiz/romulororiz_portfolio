@@ -1,0 +1,20 @@
+@import 'variables', 'mixins';
+
+.hero { 
+    @include flexCenter;
+    flex-direction: column;
+    align-items: flex-start;
+
+    h1 {
+        color: $malachite-green;
+        font-size: clamp($font-sm, 5vw, $font-md);
+    }
+
+    h2 {
+        font-size: 60px;
+    }
+
+    h2:first-of-type {
+        color: $lightest-slate;
+    }
+}

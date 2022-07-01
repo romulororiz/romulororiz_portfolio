@@ -1,69 +1,134 @@
 @import 'mixins', 'variables';
 
+// Nav Desktop
 .header {
-    @include flexBetween;
-    width: 100%;
-    top: 0;
-    z-index: 10;
-    position: fixed;
-    backdrop-filter: blur(10px);
-    font-size: $font-sm;
-    font-family: $font-mono;
-    height: $header-height;
-    padding: 0 50px;
-
-    .logo_wrapper {
-      width: 250px;
-
-      h1 {
-        color: $malachite-green;
-        pointer-events: none;
-        user-select: none;
+    @include headerNav;
+    @media ($desktopM) {
+      .nav_desktop {
+        display: none !important;
       }
     }
+}
 
-    div:nth-child(2) {
-      display: flex;
-    }
+.scrollUp {
+  @extend .header;
+  height: $header-scroll-height;
+  transform: translateY(0);
+  backdrop-filter: blur(10px);
+}
 
-    ol {
-      @include flexEnd;
-      list-style-type: none;
-      counter-reset: li;
+.scrollDown {
+  @extend .header;
+  height: $header-scroll-height;
+  transform: translateY(calc($header-scroll-height * -1));
+}
 
-      a { 
-        color: $light-slate;
-        font-weight: 400;
-        transition: $transition;
+// Menu Icon
+.menu_button_container {
+  display: none;
+  width: 30px;
+  height: 100%;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 
-          &:hover {
-            color: $malachite-green;
+  .menu_button,
+  .menu_button::before,
+  .menu_button::after {
+    display: block;
+    background-color: $malachite-green;
+    position: absolute;
+    height: 3px;
+    width: 35px;
+    border-radius: 2px;
+    transition: .25s ease;
+    z-index: 10;
+  }
+  
+  .menu_button::before {
+    content: '';
+    margin-top: -8px;
+  }
+  
+  .menu_button::after {
+    content: '';
+    margin-top: 8px;
+  }
+
+  @media ($desktopM) {
+    display: flex;
+  }
+}
+
+#menu_toggle {
+  display: none;
+}
+
+#menu_toggle:checked + .menu_button_container .menu_button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu_toggle:checked + .menu_button_container .menu_button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu_toggle:checked + .menu_button_container .menu_button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+// Nav Mobile
+.nav_mobile {
+  display: flex;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  backdrop-filter: blur(10px);
+  transition: $transition;
+
+  ol{
+    @include flexCenter;
+    width: 450px;
+    flex-direction: column;
+    text-align: left;
+    gap: 20px;
+    margin-top: -50px;
+
+   li {
+      width: 100%;
+      padding-right: 25px;
+      text-align: right;
+      font-size: $font-xxl;
+
+      @media ($mobileL) {
+      font-size: $font-md;
+
+        a {
+          font-size: $font-md;
         }
       }
-
-      li {
-        margin: 0 25px;
-        counter-increment: li;
-      }
-
-      li:last-of-type {
-        margin-right: 0;
-      }
-
-      li::before {
-        content: '0' counter(li) '.';
-        margin-right: 5px;
-        color: $malachite-green;
-      }
     }
 
-    .btn {
-      @include btnTheme(transparent, $malachite-green, $font-md, 500, $malachite-green);
-      margin-left: 25px;
-
-      &:hover {
-        background-color: rgba($malachite-green, .25);
+    li:last-of-type {
+      margin: 0;
     }
   }
-    
+
+  .btn {
+    position: absolute;
+    right: -8%;
+    bottom: 20%;
+    transform: translate(-50%, -25%);
+    padding: 15px 35px;
+  }
 }
+
+.active {
+  transform: translateX(0);
+}
+

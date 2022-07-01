@@ -20,11 +20,11 @@
   top: 0;
   z-index: 10;
   position: fixed;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
   font-size: 14px;
   font-family: "Fira Code", "Fira Mono", "Roboto Mono", monospace;
-  height: 120px;
+  height: 100px;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   padding: 0 50px;
 }
 .header .logo_wrapper {
@@ -79,7 +79,7 @@
 }
 .header .btn {
   background-color: transparent;
-  padding: 15px 25px;
+  padding: 10px 20px;
   display: inline-block;
   border-radius: 4px;
   border: 1px solid #02dd39;
@@ -98,5 +98,201 @@
   background-color: rgba(13, 13, 13, 0);
 }
 .header .btn:hover {
+  background-color: rgba(2, 221, 57, 0.25);
+}
+
+.scrollUp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  position: fixed;
+  font-size: 14px;
+  font-family: "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 0 50px;
+  height: 80px;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-box-shadow: 0 5px 30px -10px #fff;
+          box-shadow: 0 5px 30px -10px #fff;
+}
+.scrollUp .logo_wrapper {
+  width: 250px;
+}
+.scrollUp .logo_wrapper h1 {
+  color: #02dd39;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.scrollUp div:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.scrollUp ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  counter-reset: li;
+}
+.scrollUp ol a {
+  color: #a8b2d1;
+  font-weight: 400;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.scrollUp ol a:hover {
+  color: #02dd39;
+}
+.scrollUp ol li {
+  margin: 0 25px;
+  counter-increment: li;
+}
+.scrollUp ol li:last-of-type {
+  margin-right: 0;
+}
+.scrollUp ol li::before {
+  content: "0" counter(li) ".";
+  margin-right: 5px;
+  color: #02dd39;
+}
+.scrollUp .btn {
+  background-color: transparent;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #02dd39;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  color: #02dd39;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 25px;
+}
+.scrollUp .btn:hover {
+  background-color: rgba(13, 13, 13, 0);
+}
+.scrollUp .btn:hover {
+  background-color: rgba(2, 221, 57, 0.25);
+}
+
+.scrollDown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  position: fixed;
+  font-size: 14px;
+  font-family: "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 0 50px;
+  height: 80px;
+  -webkit-transform: translateY(-80px);
+          transform: translateY(-80px);
+}
+.scrollDown .logo_wrapper {
+  width: 250px;
+}
+.scrollDown .logo_wrapper h1 {
+  color: #02dd39;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.scrollDown div:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.scrollDown ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  counter-reset: li;
+}
+.scrollDown ol a {
+  color: #a8b2d1;
+  font-weight: 400;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.scrollDown ol a:hover {
+  color: #02dd39;
+}
+.scrollDown ol li {
+  margin: 0 25px;
+  counter-increment: li;
+}
+.scrollDown ol li:last-of-type {
+  margin-right: 0;
+}
+.scrollDown ol li::before {
+  content: "0" counter(li) ".";
+  margin-right: 5px;
+  color: #02dd39;
+}
+.scrollDown .btn {
+  background-color: transparent;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #02dd39;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  color: #02dd39;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 25px;
+}
+.scrollDown .btn:hover {
+  background-color: rgba(13, 13, 13, 0);
+}
+.scrollDown .btn:hover {
   background-color: rgba(2, 221, 57, 0.25);
 }

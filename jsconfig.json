@@ -4,7 +4,7 @@
         "paths": {
             "@/components/*": ["components/*"],
             "@/styles/*": ["styles/scss/*"],
-            "@/config/*": ["config/*"],
+            "@/config": ["config.js"],
             // "@/utils/*": ["utils/*"],
             // "@/context/*": ["context/*"],
             // "@/helpers/*": ["helpers/*"],
