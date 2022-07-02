@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { navLinks } from '@config';
+import { navLinks } from '../config';
 import { useEffect, useState } from 'react';
 import styles from '@/styles/Header.module.scss';
 import useScrollDirection from 'hooks/useScrollDirection';
@@ -18,6 +18,7 @@ const Header = () => {
 	const handleResize = e => {
 		if (e.currentTarget.innerWidth > 1200) {
 			setShowMenu(false);
+			// Reset Hamburger menu status on resize
 			const toggle = document.getElementById(styles.menu_toggle);
 			toggle.checked = false;
 		}
@@ -28,11 +29,11 @@ const Header = () => {
 	};
 
 	useEffect(() => {
-		if (window.screen.width > 1200) {
-			setShowMenu(false);
-			const toggle = document.getElementById(styles.menu_toggle);
-			toggle.checked = false;
-			console.log(toggle);
+		// Prevent scroll on mobile menu open
+		if (showMenu) {
+			document.body.style.overflow = 'hidden';
+		} else {
+			document.body.style.overflow = 'auto';
 		}
 
 		window.addEventListener('scroll', handleScroll);
@@ -42,7 +43,7 @@ const Header = () => {
 			window.removeEventListener('scroll', handleScroll);
 			window.addEventListener('resize', handleResize);
 		};
-	}, []);
+	}, [showMenu]);
 
 	return (
 		<div
@@ -57,6 +58,7 @@ const Header = () => {
 			<div className={styles.logo_wrapper}>
 				<h1>{logo}</h1>
 			</div>
+
 			{/* Nav Desktop */}
 			<div className={styles.nav_desktop}>
 				<ol>
