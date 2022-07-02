@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { navLinks } from '../config';
+import { navLinks } from '@config';
 import { useEffect, useState } from 'react';
 import styles from '@/styles/Header.module.scss';
 import useScrollDirection from 'hooks/useScrollDirection';
