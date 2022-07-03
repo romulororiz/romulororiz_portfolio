@@ -29,12 +29,12 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #0b0107;
+  background: #091729;
 }
 
 body::-webkit-scrollbar-thumb {
   background-color: #495670;
-  border: 3px solid #0b0107;
+  border: 3px solid #091729;
   border-radius: 10px;
 }
 
@@ -46,7 +46,7 @@ body {
   overflow-x: hidden;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  background-color: #0b0107;
+  background-color: #091729;
   color: #8892b0;
   font-family: "Inter", "Lato", -apple-system, system-ui, sans-serif;
   font-size: 20px;

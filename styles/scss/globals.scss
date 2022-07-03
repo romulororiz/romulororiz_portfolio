@@ -23,11 +23,11 @@ body::-webkit-scrollbar {
   width: 15px;
 }
 body::-webkit-scrollbar-track {
-  background: $vampire-black;
+  background: $dark-navy;
 }
 body::-webkit-scrollbar-thumb {
   background-color: $dark-slate;
-  border: 3px solid $vampire-black;
+  border: 3px solid $dark-navy;
   border-radius: 10px;
 }
 
@@ -39,7 +39,7 @@ body {
   overflow-x: hidden;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  background-color: $vampire-black;
+  background-color: $dark-navy;
   color: $slate;
   font-family: $font-sans;
   font-size: $font-xl;

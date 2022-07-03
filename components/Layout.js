@@ -11,7 +11,7 @@ export const Layout = ({ title, description, keywords, children }) => {
 				<meta name='keywords' content={keywords} />
 			</Head>
 			<Header />
-			<div>{children}</div>
+			<div className='content'>{children}</div>
 			<Footer />
 		</>
 	);
