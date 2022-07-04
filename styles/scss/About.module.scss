@@ -71,7 +71,16 @@
         position: relative;
         top: -45px;
         background-color: red;
-        height: 400px;
-        
+        min-height: 400px;
+        overflow: hidden;
+
+        .carousel_container {
+            display: flex;
+        }
+
+        .carousel_slide {
+            position: relative;
+            flex: 0 0 100%;
+        }
     }
 }
