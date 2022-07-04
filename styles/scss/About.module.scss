@@ -30,12 +30,12 @@
 
         &::after {
             content: '';
-            width: 100%;
+            width: 95%;
             height: .2px;
             position: absolute;
             top: 50%;
             left: 0%;
-            background-color: $dark-slate;
+            background-color: $malachite-green;
             z-index: -2;
         }
     }
@@ -43,11 +43,7 @@
     .about_grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-
-        .carousel {
-            margin-top: 15px;
-        }
+        position: relative;
 
         @media (max-width: 860px) {
             grid-template-columns: 1fr;
@@ -62,25 +58,101 @@
         }
 
         p {
-            margin-top: 25px;
+            padding: 0 30px 0 0;
+            margin-top: 40px;
+
+            @media (max-width: 860px) {
+                padding: 0;
+                margin-top: 25px;
+            }
         }
     }
 
     .carousel {
         @include flexCenter;
+        margin-top: 15px;
         position: relative;
         top: -45px;
-        background-color: red;
-        min-height: 400px;
-        overflow: hidden;
+        width: 100%;
+        height: auto;
 
+        @media (max-width: 860px) {
+            width: 85%;
+            margin: 25px auto 0 auto;
+        }
+
+        .carousel_viewport {
+            height: 100%;
+            overflow: hidden;
+                
+            @media (max-width: 860px) {
+                flex: 0 0 90%;
+            }
+        }
+        
         .carousel_container {
             display: flex;
+
+            @media (max-width: 860px) {
+                column-gap: 15px;
+            }
         }
 
         .carousel_slide {
             position: relative;
             flex: 0 0 100%;
+        }
+
+        .carousel_btns {
+            position: absolute;
+            bottom: -70px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+            display: flex;
+            justify-content: space-around;
+
+            @media (max-width: 860px) {
+                width: 120%;
+                top: 50%;
+                justify-content: space-between;    
+                
+                .icon_left {
+                    left: -40px;
+                }
+    
+                .icon_right {
+                    right: -40px;
+                }
+            }
+
+            @media ($mobileL) {
+                .icon_left {
+                    top: 20px;
+                }
+    
+                .icon_right {
+                    top: 20px;
+                }
+            }
+
+            .icon {
+                font-size: 48px;
+                cursor: pointer;
+                color: $malachite-green;
+
+                @media ($tabletS) {
+                    font-size: 32px;
+                }
+            }
+
+            .next_disabled {
+                background-color: red;
+            }
+
+            .prev_disabled {
+                background-color: red;
+            }
         }
     }
 }

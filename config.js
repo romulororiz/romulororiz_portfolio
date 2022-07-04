@@ -33,7 +33,6 @@ module.exports = {
 		// 	name: 'Experience',
 		// 	url: '/#experience',
 		// },
-
 		{
 			name: 'Skills',
 			url: '/#skills',
@@ -45,6 +44,39 @@ module.exports = {
 		{
 			name: 'Contact',
 			url: '/#contact',
+		},
+	],
+
+	slides: [
+		{
+			src: '/assets/women1.jpg',
+			width: 550,
+			height: 450,
+			alt: '',
+		},
+		{
+			src: '/assets/women2.jpg',
+			width: 550,
+			height: 450,
+			alt: '',
+		},
+		{
+			src: '/assets/women3.jpg',
+			width: 550,
+			height: 450,
+			alt: '',
+		},
+		{
+			src: '/assets/guy1.jpg',
+			width: 550,
+			height: 450,
+			alt: '',
+		},
+		{
+			src: '/assets/guy1.jpg',
+			width: 550,
+			height: 450,
+			alt: '',
 		},
 	],
 };
