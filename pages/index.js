@@ -4,8 +4,8 @@ import styles from '@/styles/Home.module.scss';
 
 const Home = () => {
 	return (
-		<Layout>
-			<main className={`${styles.main}`}>
+		<Layout title='Romulo Roriz'>
+			<main className={styles.main}>
 				<Hero />
 			</main>
 		</Layout>

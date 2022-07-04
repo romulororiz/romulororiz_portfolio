@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Footer from './Footer';
 import Header from './Header';
+import styles from '@/styles/Layout.module.scss';
 
 export const Layout = ({ title, description, keywords, children }) => {
 	return (
@@ -11,7 +12,7 @@ export const Layout = ({ title, description, keywords, children }) => {
 				<meta name='keywords' content={keywords} />
 			</Head>
 			<Header />
-			<div className='content'>{children}</div>
+			<div className={styles.content}>{children}</div>
 			<Footer />
 		</>
 	);

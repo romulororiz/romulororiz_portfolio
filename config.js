@@ -35,12 +35,12 @@ module.exports = {
 		// },
 
 		{
-			name: 'Work',
-			url: '/#work',
+			name: 'Skills',
+			url: '/#skills',
 		},
 		{
-			name: 'Tech Stack',
-			url: '/#tech-stack',
+			name: 'Projects',
+			url: '/#projects',
 		},
 		{
 			name: 'Contact',

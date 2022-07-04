@@ -4,17 +4,36 @@
     @include flexCenter;
     flex-direction: column;
     align-items: flex-start;
-
+    justify-content: center;
+    min-height: 100vh;
+    color: $slate;
+    
     h1 {
+        font-size: $font-lg;
         color: $malachite-green;
-        font-size: clamp($font-sm, 5vw, $font-md);
+        font-family: $font-mono;
+        font-weight: 500;
     }
 
-    h2 {
-        font-size: 60px;
-    }
-
-    h2:first-of-type {
+    h2:first-child {
+        font-size: 70px;
         color: $lightest-slate;
+    }
+
+    // h2:not(:nth-child(2)) {
+    //     font-size: 25px;
+    //     background-color: red;
+    // }
+
+    span {
+        font-family: $font-mono;
+        font-style: italic;
+    }
+
+    p {
+        font-size: $font-md;
+        max-width: 550px;
+        font-weight: 300;
+        line-height: 1.5;
     }
 }

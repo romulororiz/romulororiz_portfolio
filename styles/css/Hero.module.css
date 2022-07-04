@@ -23,14 +23,27 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+  color: #8892b0;
 }
 .hero h1 {
+  font-size: 18px;
   color: #02c733;
-  font-size: clamp(14px, 5vw, 16px);
+  font-family: "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-weight: 500;
 }
-.hero h2 {
-  font-size: 60px;
-}
-.hero h2:first-of-type {
+.hero h2:first-child {
+  font-size: 70px;
   color: #ccd6f6;
+}
+.hero span {
+  font-family: "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-style: italic;
+}
+.hero p {
+  font-size: 16px;
+  max-width: 550px;
+  font-weight: 300;
+  line-height: 1.5;
 }

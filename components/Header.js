@@ -1,10 +1,9 @@
 import Link from 'next/link';
 import { navLinks } from '@config';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import styles from '@/styles/Header.module.scss';
 import useScrollDirection from 'hooks/useScrollDirection';
 import useOnClickOutside from 'hooks/useOnClickOutside';
-import Head from 'next/head';
 
 const logo = `<RR/>`;
 
@@ -31,10 +30,11 @@ const Header = () => {
 
 	useEffect(() => {
 		// Prevent scroll on mobile menu open
+		const body = document.getElementById('body');
 		if (showMenu) {
-			document.body.style.overflow = 'hidden';
+			body.style.overflowY = 'hidden';
 		} else {
-			document.body.style.overflow = 'auto';
+			body.style.overflowY = 'auto';
 		}
 
 		window.addEventListener('scroll', handleScroll);
@@ -47,18 +47,17 @@ const Header = () => {
 	}, [showMenu]);
 
 	// Close mobile menu when click outside
-	// const menuWrapperRef = useRef();
-	// useOnClickOutside(menuWrapperRef, () => {
-	// 	setShowMenu(false);
-	// 	document.getElementById(styles.menu_toggle).checked = false;
-	// });
+	const menuWrapperRef = useRef();
+	useOnClickOutside(
+		menuWrapperRef,
+		useCallback(() => {
+			setShowMenu(false);
+			document.getElementById(styles.menu_toggle).checked = false;
+		}, [])
+	);
 
 	return (
 		<>
-			<Head>
-				{/* Implement blur on menu mobile open */}
-				<body />
-			</Head>
 			<div
 				className={`${
 					scrollDirection === 'up' && !scrollTop
@@ -82,9 +81,9 @@ const Header = () => {
 								</li>
 							))}
 					</ol>
-					<a className={styles.btn} href='#' rel='noopener noreferrer'>
+					{/* <a className={styles.btn} href='#' rel='noopener noreferrer'>
 						Resume
-					</a>
+					</a> */}
 				</div>
 
 				{/* Hamburger Menu */}
@@ -98,7 +97,10 @@ const Header = () => {
 				</label>
 
 				{/* Nav Mobile */}
-				<div className={`${styles.nav_mobile} ${showMenu && styles.active}`}>
+				<div
+					className={`${styles.nav_mobile} ${showMenu && styles.active}`}
+					ref={menuWrapperRef}
+				>
 					<ol>
 						{navLinks &&
 							navLinks.map(({ url, name }, i) => (
