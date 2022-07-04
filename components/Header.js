@@ -74,7 +74,9 @@ const Header = () => {
 				}`}
 			>
 				<div className={styles.logo_wrapper}>
-					<h1>{logo}</h1>
+					<Link href='/'>
+						<h1>{logo}</h1>
+					</Link>
 				</div>
 
 				{/* Nav Desktop */}

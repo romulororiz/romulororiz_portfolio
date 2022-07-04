@@ -49,6 +49,7 @@
     height: $header-height;
     transition: $transition;
     padding: 0 50px;
+    backdrop-filter: blur(5px);
 
     @media ($desktopM) {
         padding: 0 40px;
@@ -59,12 +60,12 @@
     }
 
     .logo_wrapper {
-        width: 250px;
 
         h1 {
         color: $malachite-green;
-        pointer-events: none;
         user-select: none;
+        z-index: 10;
+        cursor: pointer;
         }
     }
 

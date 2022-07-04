@@ -26,6 +26,8 @@
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   padding: 0 50px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 @media (max-width: 1200px) {
   .header, .scrollDown, .scrollUp {
@@ -37,16 +39,14 @@
     padding: 0 30px;
   }
 }
-.header .logo_wrapper, .scrollDown .logo_wrapper, .scrollUp .logo_wrapper {
-  width: 250px;
-}
 .header .logo_wrapper h1, .scrollDown .logo_wrapper h1, .scrollUp .logo_wrapper h1 {
   color: #02c733;
-  pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  z-index: 10;
+  cursor: pointer;
 }
 .header div:nth-child(2), .scrollDown div:nth-child(2), .scrollUp div:nth-child(2) {
   display: -webkit-box;
