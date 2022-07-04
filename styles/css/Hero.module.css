@@ -25,7 +25,6 @@
           align-items: flex-start;
   justify-content: center;
   min-height: 100vh;
-  color: #8892b0;
 }
 .hero h1 {
   font-size: 18px;
@@ -33,17 +32,40 @@
   font-family: "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   font-weight: 500;
 }
-.hero h2:first-child {
-  font-size: 70px;
+.hero h2 {
+  font-size: 65px;
   color: #ccd6f6;
+}
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 45px;
+  }
+}
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 35px;
+  }
+}
+.hero .heading {
+  font-size: 55px;
+}
+@media (max-width: 768px) {
+  .hero .heading {
+    font-size: 35px;
+  }
+}
+@media (max-width: 480px) {
+  .hero .heading {
+    font-size: 20px;
+  }
 }
 .hero span {
   font-family: "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  color: #02c733;
   font-style: italic;
 }
 .hero p {
   font-size: 16px;
   max-width: 550px;
-  font-weight: 300;
   line-height: 1.5;
 }

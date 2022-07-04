@@ -16,16 +16,21 @@ const Header = () => {
 		setShowMenu(!showMenu);
 	};
 
-	const handleResize = e => {
+	const handleResize = useCallback(e => {
 		if (e.currentTarget.innerWidth > 1200) {
 			setShowMenu(false);
 			// Reset Hamburger menu status on resize
-			document.getElementById(styles.menu_toggle).checked = false;
+			handleCheckedStatus();
 		}
-	};
+	}, []);
 
 	const handleScroll = () => {
 		setScrollTop(document.documentElement.scrollTop < 50);
+	};
+
+	const handleCheckedStatus = () => {
+		const toggle = document.getElementById(styles.menu_toggle);
+		toggle.checked = false;
 	};
 
 	useEffect(() => {
@@ -44,17 +49,18 @@ const Header = () => {
 			window.removeEventListener('scroll', handleScroll);
 			window.addEventListener('resize', handleResize);
 		};
-	}, [showMenu]);
+	}, [handleResize, showMenu]);
 
+	// todo
 	// Close mobile menu when click outside
-	const menuWrapperRef = useRef();
-	useOnClickOutside(
-		menuWrapperRef,
-		useCallback(() => {
-			setShowMenu(false);
-			document.getElementById(styles.menu_toggle).checked = false;
-		}, [])
-	);
+	// const menuWrapperRef = useRef();
+	// useOnClickOutside(
+	// 	menuWrapperRef,
+	// 	useCallback(() => {
+	// 		setShowMenu(false);
+	// document.getElementById(styles.menu_toggle).checked = false;
+	// 	}, [])
+	// );
 
 	return (
 		<>
@@ -97,14 +103,17 @@ const Header = () => {
 				</label>
 
 				{/* Nav Mobile */}
-				<div
-					className={`${styles.nav_mobile} ${showMenu && styles.active}`}
-					ref={menuWrapperRef}
-				>
+				<div className={`${styles.nav_mobile} ${showMenu && styles.active}`}>
 					<ol>
 						{navLinks &&
 							navLinks.map(({ url, name }, i) => (
-								<li key={i}>
+								<li
+									key={i}
+									onClick={() => {
+										setShowMenu(false);
+										handleCheckedStatus();
+									}}
+								>
 									<Link href={url}>{name}</Link>
 								</li>
 							))}

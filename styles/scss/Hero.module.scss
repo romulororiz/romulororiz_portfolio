@@ -6,7 +6,7 @@
     align-items: flex-start;
     justify-content: center;
     min-height: 100vh;
-    color: $slate;
+
     
     h1 {
         font-size: $font-lg;
@@ -15,25 +15,41 @@
         font-weight: 500;
     }
 
-    h2:first-child {
-        font-size: 70px;
+    h2 {
+        font-size: 65px;
         color: $lightest-slate;
+
+        @media ($tabletL) {
+            font-size: 45px;
+        }
+
+        @media ($mobileL) {
+            font-size: 35px;
+        }
+        
     }
 
-    // h2:not(:nth-child(2)) {
-    //     font-size: 25px;
-    //     background-color: red;
-    // }
+    .heading {
+        font-size: 55px;
+
+        @media ($tabletL) {
+            font-size: 35px;
+        }
+
+        @media ($mobileL) {
+            font-size: 20px;
+        }
+    }
 
     span {
         font-family: $font-mono;
+        color: $malachite-green;
         font-style: italic;
     }
 
     p {
         font-size: $font-md;
         max-width: 550px;
-        font-weight: 300;
         line-height: 1.5;
     }
 }

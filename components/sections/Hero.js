@@ -4,7 +4,7 @@ import styles from '@/styles/Hero.module.scss';
 const itemOne = <h1>Hi, my name is</h1>;
 const itemTwo = <h2>Romulo Roriz</h2>;
 const itemThree = (
-	<h2>
+	<h2 className={styles.heading}>
 		I Love <span>Bringing Ideas</span> To Life
 	</h2>
 );
