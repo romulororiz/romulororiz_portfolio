@@ -6,6 +6,7 @@ import { slides, about } from '@/config/index';
 import { disablePrevNextBtns, setupPrevNextBtns } from '@/utils/emblaConf';
 import DotBtn from '@/components/DotBtn';
 import styles from '@/styles/About.module.scss';
+import Icon from '@/components/icons/icon';
 
 const About = () => {
 	const [slideOne, setSlideOne] = useState(true);
@@ -64,21 +65,6 @@ const About = () => {
 		emblaApi.on('select', onSelect);
 	}, [emblaApi, onSelect]);
 
-	// Handle Resize - get mobile value
-	// useEffect(() => {
-	// 	setWindowDimension(window.innerWidth);
-	// }, []);
-
-	// useEffect(() => {
-	// 	const handleResize = () => {
-	// 		setWindowDimension(window.innerWidth);
-	// 	};
-
-	// 	window.addEventListener('resize', handleResize, false);
-	// 	return () => window.removeEventListener('resize', handleResize);
-	// }, []);
-	// const isMobile = windowDimension <= 860;
-
 	// Handle Scroll
 	const { scrollNext, scrollPrev } = setupPrevNextBtns(emblaApi);
 
@@ -87,7 +73,10 @@ const About = () => {
 
 	return (
 		<div id='about' className={styles.about}>
-			<h1>About Me</h1>
+			<h1>
+				<Icon name='caretR' />
+				About Me
+			</h1>
 			<div className={styles.about_grid}>
 				<p className={styles.about_text}>
 					{slideOne

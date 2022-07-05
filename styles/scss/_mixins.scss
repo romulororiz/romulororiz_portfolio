@@ -126,12 +126,16 @@
     &::before {
         content: '';
         position: absolute;
-        width: 170px;
+        width: 165px;
         height: 100%;
         top: 0;
         left: 0;
         background-color: $dark-navy;
         z-index: -1;
+
+        @media ($mobileL) {
+            width: 115px;
+        }
     }
 
     &::after {
@@ -142,7 +146,6 @@
         top: 50%;
         left: 0%;
         background-color: $malachite-green;
-        opacity: .55;
         z-index: -2;
     }
 }

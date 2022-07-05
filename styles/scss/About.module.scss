@@ -157,21 +157,7 @@
 }
 
 @media ($mobileL) {
-    // .carousel_btns {
-    //     .icon_left {
-    //         top: 20px;
-    //     }
-    
-    //     .icon_right {
-    //         top: 20px;
-    //     }
-    // }
-}
-
-@media ($tabletS) {
-//    .carousel_btns {
-//         .icon {
-//             font-size: 32px;
-//         }
-//    }
+    .about h1 {
+        font-size: $font-xxl;
+    }
 }

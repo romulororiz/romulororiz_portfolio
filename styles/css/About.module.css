@@ -35,12 +35,17 @@
 .about h1::before {
   content: "";
   position: absolute;
-  width: 170px;
+  width: 165px;
   height: 100%;
   top: 0;
   left: 0;
   background-color: #091729;
   z-index: -1;
+}
+@media (max-width: 480px) {
+  .about h1::before {
+    width: 115px;
+  }
 }
 .about h1::after {
   content: "";
@@ -50,7 +55,6 @@
   top: 50%;
   left: 0%;
   background-color: #02c733;
-  opacity: 0.55;
   z-index: -2;
 }
 
@@ -206,5 +210,10 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+@media (max-width: 480px) {
+  .about h1 {
+    font-size: 22px;
   }
 }
