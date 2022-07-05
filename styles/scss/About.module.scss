@@ -106,6 +106,14 @@
     }
 }
 
+.carousel_dots {
+    position: absolute;
+    display: none;
+    width: 65%;
+    bottom: -40px;
+    justify-content: space-around;
+}
+
 @media ($desktopXS) {
     .about h1 {
         width: 100%;
@@ -120,19 +128,17 @@
 
         p {
             padding: 0;
-            margin-top: 25px;
         }
     }
 
     // Carousel
     .carousel {
-        width: 85%;
-        margin: 25px auto 0 auto;
+        margin: 25px auto;
         order: -1;
         top: 0;
 
         &::after {
-            width: 85%;
+            content: none;
         }
     }
 
@@ -141,36 +147,31 @@
     }
 
     .carousel_btns {
-        width: 120%;
-        top: 50%;
-        justify-content: space-between;    
-        
-        .icon_left {
-            left: -40px;
-        }
+        display: none;
+    }
 
-        .icon_right {
-            right: -40px;
-        }
+    .carousel_dots {
+        display: flex;
+        
     }
 }
 
 @media ($mobileL) {
-    .carousel_btns {
-        .icon_left {
-            top: 20px;
-        }
+    // .carousel_btns {
+    //     .icon_left {
+    //         top: 20px;
+    //     }
     
-        .icon_right {
-            top: 20px;
-        }
-    }
+    //     .icon_right {
+    //         top: 20px;
+    //     }
+    // }
 }
 
 @media ($tabletS) {
-   .carousel_btns {
-        .icon {
-            font-size: 32px;
-        }
-   }
+//    .carousel_btns {
+//         .icon {
+//             font-size: 32px;
+//         }
+//    }
 }

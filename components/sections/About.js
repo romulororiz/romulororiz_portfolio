@@ -1,10 +1,11 @@
 import { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import styles from '@/styles/About.module.scss';
 import { BsArrowLeftSquare, BsArrowRightSquare } from 'react-icons/bs';
 import Image from '@/components/Image';
 import { slides, about } from '@/config/index';
 import { disablePrevNextBtns, setupPrevNextBtns } from '@/utils/emblaConf';
+import DotBtn from '@/components/DotBtn';
+import styles from '@/styles/About.module.scss';
 
 const About = () => {
 	const [slideOne, setSlideOne] = useState(true);
@@ -12,7 +13,21 @@ const About = () => {
 	const [slideThree, setSlideThree] = useState(false);
 	const [slideFour, setSlideFour] = useState(false);
 	const [slideFive, setSlideFive] = useState(false);
+	const [selectedIndex, setSelectedIndex] = useState(0);
+	const [scrollSnaps, setScrollSnaps] = useState([]);
+	// const [windowDimension, setWindowDimension] = useState(0);
 	const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
+
+	// Carousel Dots
+	const onSelect = useCallback(() => {
+		if (!emblaApi) return;
+		setSelectedIndex(emblaApi.selectedScrollSnap());
+	}, [emblaApi]);
+
+	const scrollTo = useCallback(
+		index => emblaApi && emblaApi.scrollTo(index),
+		[emblaApi]
+	);
 
 	useEffect(() => {
 		if (!emblaApi) return;
@@ -45,8 +60,24 @@ const About = () => {
 			}
 		});
 
-		return;
-	}, [emblaApi]);
+		setScrollSnaps(emblaApi.scrollSnapList());
+		emblaApi.on('select', onSelect);
+	}, [emblaApi, onSelect]);
+
+	// Handle Resize - get mobile value
+	// useEffect(() => {
+	// 	setWindowDimension(window.innerWidth);
+	// }, []);
+
+	// useEffect(() => {
+	// 	const handleResize = () => {
+	// 		setWindowDimension(window.innerWidth);
+	// 	};
+
+	// 	window.addEventListener('resize', handleResize, false);
+	// 	return () => window.removeEventListener('resize', handleResize);
+	// }, []);
+	// const isMobile = windowDimension <= 860;
 
 	// Handle Scroll
 	const { scrollNext, scrollPrev } = setupPrevNextBtns(emblaApi);
@@ -81,6 +112,7 @@ const About = () => {
 							))}
 						</div>
 					</div>
+					{/* Btns */}
 					<div className={styles.carousel_btns}>
 						<a onClick={scrollPrev}>
 							<BsArrowLeftSquare
@@ -96,6 +128,16 @@ const About = () => {
 								}`}
 							/>
 						</a>
+					</div>
+					{/* Dots */}
+					<div className={styles.carousel_dots}>
+						{scrollSnaps.map((_, index) => (
+							<DotBtn
+								key={index}
+								selected={index === selectedIndex}
+								onClick={() => scrollTo(index)}
+							/>
+						))}
 					</div>
 				</div>
 			</div>
