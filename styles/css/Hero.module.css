@@ -72,3 +72,8 @@
 .hero p {
   max-width: 550px;
 }
+@media (max-width: 480px) {
+  .hero p {
+    font-size: 14px;
+  }
+}

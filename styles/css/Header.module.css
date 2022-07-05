@@ -55,7 +55,7 @@
 }
 @media (max-width: 600px) {
   .header .logo_wrapper h1, .scrollDown .logo_wrapper h1, .scrollUp .logo_wrapper h1 {
-    font-size: 18px;
+    font-size: 22px;
   }
 }
 .header div:nth-child(2), .scrollDown div:nth-child(2), .scrollUp div:nth-child(2) {
