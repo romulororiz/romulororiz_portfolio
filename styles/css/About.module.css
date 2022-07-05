@@ -36,16 +36,31 @@
   content: "";
   position: absolute;
   width: 165px;
-  height: 100%;
   top: 0;
   left: 0;
+  height: 100%;
   background-color: #091729;
   z-index: -1;
 }
-@media (max-width: 480px) {
-  .about h1::before {
-    width: 115px;
-  }
+.about h1::after {
+  content: "";
+  width: 95%;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  background-color: #02c733;
+  z-index: -2;
+}
+.about h1::before {
+  content: "";
+  position: absolute;
+  width: 165px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #091729;
+  z-index: -1;
 }
 .about h1::after {
   content: "";
@@ -65,7 +80,7 @@
 }
 .about_grid p {
   padding: 0 30px 0 0;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .carousel {
@@ -115,8 +130,14 @@
           flex: 0 0 100%;
   border-radius: 4px;
   overflow: hidden;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
-.carousel_slide ::after {
+.carousel_slide:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+.carousel_slide::after {
   content: "";
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -215,5 +236,8 @@
 @media (max-width: 480px) {
   .about h1 {
     font-size: 22px;
+  }
+  .about h1::before {
+    width: 115px;
   }
 }

@@ -1,4 +1,26 @@
 @import 'variables';
+
+.icon {
+    font-size: 90px;
+    transition: $transition;
+
+    &:hover {
+        color: $malachite-green;
+        transform: translateY(-3px);
+    }
+
+    @media (desktopXS) {
+        font-size: 60px;
+    }
+
+    @media ($tabletL) {
+        font-size: 50px;
+    }
+
+    @media ($mobileL) {
+        font-size: 40px;
+    }
+}
     
 .caretR {
     position: absolute;

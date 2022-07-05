@@ -65,14 +65,15 @@
         user-select: none;
         z-index: 10;
         cursor: pointer;
-        color: $light-slate;
+        color: $lightest-slate;
+        margin-top: 10px;
 
             span {
                 color: $malachite-green;
             }
 
             @media ($tabletS) {
-                font-size: $font-md;
+                font-size: $font-lg;
             }
         }
     }
@@ -122,20 +123,26 @@
     }
 }
 
+@mixin heading {
+    font-size: $font-heading;
+    color: $lightest-slate;
+    position: relative;
+    padding-right: 15px;
+    @include headingLine;
+}
+
 @mixin headingLine {
     &::before {
         content: '';
         position: absolute;
         width: 165px;
-        height: 100%;
         top: 0;
         left: 0;
+        height: 100%;
         background-color: $dark-navy;
         z-index: -1;
 
-        @media ($mobileL) {
-            width: 115px;
-        }
+       
     }
 
     &::after {

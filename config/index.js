@@ -97,4 +97,53 @@ module.exports = {
 			text: 'Lorem ipsum, dolor sit amet consectetur adipisicingLorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, doloribus.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, doloribus.',
 		},
 	],
+
+	// Skills icons
+	icons: [
+		{
+			name: 'Git',
+		},
+		{
+			name: 'Github',
+		},
+		{
+			name: 'Html5',
+		},
+		{
+			name: 'Css',
+		},
+		{
+			name: 'Sass',
+		},
+		{
+			name: 'Javascript',
+		},
+		{
+			name: 'React',
+		},
+		{
+			name: 'Next',
+		},
+		{
+			name: 'Node',
+		},
+		{
+			name: 'Styled',
+		},
+		{
+			name: 'Mongodb',
+		},
+		{
+			name: 'Postman',
+		},
+		{
+			name: 'Heroku',
+		},
+		{
+			name: 'Redux',
+		},
+		{
+			name: 'Express',
+		},
+	],
 };

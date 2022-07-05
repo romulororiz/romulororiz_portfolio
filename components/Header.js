@@ -7,7 +7,7 @@ import useOnClickOutside from 'hooks/useOnClickOutside';
 
 const logo = (
 	<>
-		<span>&#60;</span>romulororiz /<span>&#62;</span>
+		<span>&#60;</span>RR /<span>&#62;</span>
 	</>
 );
 
