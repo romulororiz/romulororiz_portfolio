@@ -16,7 +16,6 @@
 .about_grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    position: relative;
 
     p {
         padding: 0 30px 0 0;
@@ -26,28 +25,31 @@
 
 .carousel {
     @include flexCenter;
-    margin-top: 15px;
     position: relative;
-    top: -45px;
+    top: -30px;
     width: 100%;
 
     &::after {
         content: '';
         position: absolute;
-        top: 8px;
-        left: 12px;
+        top: 15px;
+        left: 15px;
         width: 100%;
         height: 100%;
         background-color: transparent;
-        border-radius: $border-radius;
+        border-radius: 8px;
         border: 2px solid $islamic-green;
         opacity: .35;
         z-index: -1;
+        transition: $transition;
+    }
+
+    &:hover::after {
+        opacity: 1;
     }
 }
 
 .carousel_viewport {
-    height: 100%;
     overflow: hidden;
 }
 
@@ -58,9 +60,10 @@
 .carousel_slide {
     position: relative;
     flex: 0 0 100%;
-    border-radius: $border-radius;
+    border-radius: 8px;
     overflow: hidden;
     cursor: grab;
+    display: flex;
 
     &:active {
         cursor: grabbing;
@@ -74,16 +77,17 @@
         left: 0;
         width: 100%;
         height: 100%;
+        background-color: rgba(0,0,0,.45);
     }
 
-    &:hover ::after {
-        background-color: rgba($islamic-green, .20);
+    &:hover::after {
+        background-color: transparent;
     }
 }
 
 .carousel_btns {
     position: absolute;
-    bottom: -80px;
+    bottom: -85px;
     left: 50%;
     transform: translateX(-50%);
     width: 140px;
