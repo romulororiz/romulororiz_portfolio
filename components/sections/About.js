@@ -82,24 +82,18 @@ const About = () => {
 						</div>
 					</div>
 					<div className={styles.carousel_btns}>
-						<a
-							className={`${styles.embla_prev} ${
-								!canScrollPrev && styles.embla_prev_disabled
-							}`}
-							onClick={scrollPrev}
-						>
+						<a onClick={scrollPrev}>
 							<BsArrowLeftSquare
-								className={`${styles.icon} ${styles.icon_left}`}
+								className={`${styles.icon} ${styles.icon_left} ${
+									!canScrollPrev && styles.embla_prev_disabled
+								}`}
 							/>
 						</a>
-						<a
-							className={`${styles.embla_next} ${
-								!canScrollNext && styles.embla_next_disabled
-							}`}
-							onClick={scrollNext}
-						>
+						<a onClick={scrollNext}>
 							<BsArrowRightSquare
-								className={`${styles.icon} ${styles.icon_right}`}
+								className={`${styles.icon} ${styles.icon_right} ${
+									!canScrollNext && styles.embla_next_disabled
+								}`}
 							/>
 						</a>
 					</div>
