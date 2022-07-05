@@ -11,9 +11,8 @@ const itemThree = (
 const itemFour = (
 	<p>
 		I'm a self-taught Web Developer walking the never ending learning path of
-		Frontend Development. I love building fully responsive user-friendly
-		websites with proven design patterns combined with the latest technologies
-		out there.
+		Web Development. I love building fully responsive user-friendly websites
+		with proven design patterns combined with the latest technologies out there.
 	</p>
 );
 

@@ -1,11 +1,15 @@
 import Link from 'next/link';
-import { navLinks } from '@config';
+import { navLinks } from '@/config/index';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import styles from '@/styles/Header.module.scss';
 import useScrollDirection from 'hooks/useScrollDirection';
 import useOnClickOutside from 'hooks/useOnClickOutside';
 
-const logo = `<RR/>`;
+const logo = (
+	<>
+		<span>&#60;</span>romulororiz /<span>&#62;</span>
+	</>
+);
 
 const Header = () => {
 	const [scrollTop, setScrollTop] = useState(true);

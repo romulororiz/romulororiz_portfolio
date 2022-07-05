@@ -3,11 +3,9 @@
         "baseUrl": ".",
         "paths": {
             "@/components/*": ["components/*"],
-            "@/styles/*": ["styles/scss/*"],
-            "@config": ["config.js"],
-            // "@/utils/*": ["utils/*"],
-            // "@/context/*": ["context/*"],
-            // "@/helpers/*": ["helpers/*"],
+            "@/styles/*": ["styles/*"],
+            "@/config/*": ["config/*"],
+            "@/utils/*": ["utils/*"],
         }
     }
 }

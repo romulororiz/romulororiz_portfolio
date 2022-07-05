@@ -47,6 +47,15 @@
           user-select: none;
   z-index: 10;
   cursor: pointer;
+  color: #a8b2d1;
+}
+.header .logo_wrapper h1 span, .scrollDown .logo_wrapper h1 span, .scrollUp .logo_wrapper h1 span {
+  color: #02c733;
+}
+@media (max-width: 600px) {
+  .header .logo_wrapper h1, .scrollDown .logo_wrapper h1, .scrollUp .logo_wrapper h1 {
+    font-size: 16px;
+  }
 }
 .header div:nth-child(2), .scrollDown div:nth-child(2), .scrollUp div:nth-child(2) {
   display: -webkit-box;

@@ -60,12 +60,20 @@
     }
 
     .logo_wrapper {
-
         h1 {
         color: $malachite-green;
         user-select: none;
         z-index: 10;
         cursor: pointer;
+        color: $light-slate;
+
+            span {
+                color: $malachite-green;
+            }
+
+            @media ($tabletS) {
+                font-size: $font-md;
+            }
         }
     }
 
@@ -111,5 +119,30 @@
             &:hover {
             background-color: rgba($malachite-green, .25);
         }
+    }
+}
+
+@mixin headingLine {
+    &::before {
+        content: '';
+        position: absolute;
+        width: 170px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $dark-navy;
+        z-index: -1;
+    }
+
+    &::after {
+        content: '';
+        width: 95%;
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        background-color: $malachite-green;
+        opacity: .55;
+        z-index: -2;
     }
 }
