@@ -22,9 +22,12 @@ import {
 } from 'react-icons/si';
 import { BsCaretRight } from 'react-icons/bs';
 import styles from '@/styles/Icon.module.scss';
-import Tooltip from '../Tooltip';
+import Tooltip from '@/components/Tooltip';
 
 const Icon = ({ name }) => {
+	
+
+
 	switch (name) {
 		case 'Instagram':
 			return <FaInstagram className={styles.icon} />;
@@ -33,9 +36,9 @@ const Icon = ({ name }) => {
 		case 'Github':
 			return (
 				<Tooltip name={name}>
-					<a>
+					<span>
 						<FaGithub className={styles.icon} />
-					</a>
+					</span>
 				</Tooltip>
 			);
 		case 'Linkedin':
@@ -43,113 +46,113 @@ const Icon = ({ name }) => {
 		case 'Git':
 			return (
 				<Tooltip name={name}>
-					<a>
+					<span>
 						<FaGitAlt className={styles.icon} />
-					</a>
+					</span>
 				</Tooltip>
 			);
 		case 'Html5':
 			return (
 				<Tooltip name={name}>
-					<a>
+					<span>
 						<FaHtml5 className={styles.icon} />
-					</a>
+					</span>
 				</Tooltip>
 			);
 		case 'Css3':
 			return (
 				<Tooltip name={name}>
-					<a>
+					<span>
 						<FaCss3 className={styles.icon} />
-					</a>
+					</span>
 				</Tooltip>
 			);
 		case 'Sass':
 			return (
 				<Tooltip name={name}>
-					<a>
+					<span>
 						<FaSass className={styles.icon} />
-					</a>
+					</span>
 				</Tooltip>
 			);
 		case 'Javascript':
 			return (
 				<Tooltip name={name}>
-					<a>
+					<span>
 						<IoLogoJavascript className={styles.icon} />
-					</a>
+					</span>
 				</Tooltip>
 			);
 		case 'React':
 			return (
 				<Tooltip name={name}>
-					<a>
+					<span>
 						<FaReact className={styles.icon} />
-					</a>
+					</span>
 				</Tooltip>
 			);
 		case 'NextJs':
 			return (
 				<Tooltip name={name}>
-					<a>
+					<span>
 						<TbBrandNextjs className={styles.icon} />
-					</a>
+					</span>
 				</Tooltip>
 			);
 		case 'NodeJs':
 			return (
 				<Tooltip name={name}>
-					<a>
+					<span>
 						<FaNodeJs className={styles.icon} />
-					</a>
+					</span>
 				</Tooltip>
 			);
 		case 'Styled Components':
 			return (
 				<Tooltip name={name}>
-					<a>
+					<span>
 						<SiStyledcomponents className={styles.icon} />
-					</a>
+					</span>
 				</Tooltip>
 			);
 		case 'Mongodb':
 			return (
 				<Tooltip name={name}>
-					<a>
+					<span>
 						<SiMongodb className={styles.icon} />
-					</a>
+					</span>
 				</Tooltip>
 			);
 		case 'Heroku':
 			return (
 				<Tooltip name={name}>
-					<a>
+					<span>
 						<SiHeroku className={styles.icon} />
-					</a>
+					</span>
 				</Tooltip>
 			);
 		case 'Redux':
 			return (
 				<Tooltip name={name}>
-					<a>
+					<span>
 						<SiRedux className={styles.icon} />
-					</a>
+					</span>
 				</Tooltip>
 			);
 		case 'Express':
 			return (
 				<Tooltip name={name}>
-					<a>
+					<span>
 						<SiExpress className={styles.icon} />
-					</a>
+					</span>
 				</Tooltip>
 			);
 		case 'Postman':
 			return (
 				<Tooltip name={name}>
-					<a>
+					<span>
 						<SiPostman className={styles.icon} />
-					</a>
+					</span>
 				</Tooltip>
 			);
 		case 'caretR':

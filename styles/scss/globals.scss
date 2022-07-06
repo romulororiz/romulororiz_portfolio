@@ -38,12 +38,11 @@ body {
   overflow-x: hidden;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  // background-color: $dark-navy;
-  // background-attachment: fixed;
   color: $slate;
   font-family: $font-sans;
   font-size: $font-xl;
   line-height: 1.3;
+  position: relative;
 
   &::before {
       content: "";

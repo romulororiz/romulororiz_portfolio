@@ -114,6 +114,9 @@
 .carousel:hover::after {
   opacity: 1;
 }
+.carousel:hover .carousel_slide::after {
+  background-color: transparent;
+}
 
 .carousel_viewport {
   overflow: hidden;
@@ -169,6 +172,9 @@
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+.carousel_btns:hover.carousel_container {
+  border: 1px solid red;
 }
 .carousel_btns .embla_prev_disabled, .carousel_btns .embla_next_disabled {
   pointer-events: none;

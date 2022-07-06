@@ -1,8 +1,5 @@
 module.exports = {
-	// Email
-	email: 'romulonmroriz@gmail.com',
-
-	// Social Links
+	// Social Links & Email
 	socialMedia: [
 		{
 			name: 'Github',
@@ -19,6 +16,10 @@ module.exports = {
 		{
 			name: 'Twitter',
 			url: 'https://twitter.com/romulororiz',
+		},
+		{
+			name: 'Email',
+			url: 'mailto:romulonmroriz@gmail.com',
 		},
 	],
 
