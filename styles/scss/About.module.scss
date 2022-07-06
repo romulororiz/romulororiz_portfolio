@@ -19,7 +19,7 @@
 
     p {
         padding: 0 30px 0 0;
-        margin-top: 60px;
+        margin-top: 40px;
     }
 }
 
@@ -115,7 +115,7 @@
 .carousel_dots {
     position: absolute;
     display: none;
-    width: 65%;
+    width: 45%;
     bottom: -40px;
     justify-content: space-around;
 }
@@ -150,6 +150,12 @@
 
     .carousel_viewport {
         flex: 0 0 90%;
+    }
+
+    .carousel_slide {
+        &::after {
+            content: none;
+        }
     }
 
     .carousel_btns {

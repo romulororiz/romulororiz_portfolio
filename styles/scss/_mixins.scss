@@ -49,7 +49,6 @@
     height: $header-height;
     transition: $transition;
     padding: 0 50px;
-    backdrop-filter: blur(5px);
 
     @media ($desktopM) {
         padding: 0 40px;

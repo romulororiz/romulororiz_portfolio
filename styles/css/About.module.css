@@ -76,11 +76,10 @@
 .about_grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  position: relative;
 }
 .about_grid p {
   padding: 0 30px 0 0;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .carousel {
@@ -93,27 +92,30 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 15px;
   position: relative;
-  top: -45px;
+  top: -30px;
   width: 100%;
 }
 .carousel::after {
   content: "";
   position: absolute;
-  top: 8px;
-  left: 12px;
+  top: 15px;
+  left: 15px;
   width: 100%;
   height: 100%;
   background-color: transparent;
-  border-radius: 4px;
+  border-radius: 8px;
   border: 2px solid #008F11;
   opacity: 0.35;
   z-index: -1;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.carousel:hover::after {
+  opacity: 1;
 }
 
 .carousel_viewport {
-  height: 100%;
   overflow: hidden;
 }
 
@@ -128,10 +130,13 @@
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
-  border-radius: 4px;
+  border-radius: 8px;
   overflow: hidden;
   cursor: -webkit-grab;
   cursor: grab;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .carousel_slide:active {
   cursor: -webkit-grabbing;
@@ -146,14 +151,15 @@
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
 }
-.carousel_slide:hover ::after {
-  background-color: rgba(0, 143, 17, 0.2);
+.carousel_slide:hover::after {
+  background-color: transparent;
 }
 
 .carousel_btns {
   position: absolute;
-  bottom: -80px;
+  bottom: -85px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -183,7 +189,7 @@
 .carousel_dots {
   position: absolute;
   display: none;
-  width: 65%;
+  width: 45%;
   bottom: -40px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -221,6 +227,10 @@
     -webkit-box-flex: 0;
         -ms-flex: 0 0 90%;
             flex: 0 0 90%;
+  }
+
+  .carousel_slide::after {
+    content: none;
   }
 
   .carousel_btns {

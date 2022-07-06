@@ -1,0 +1,10 @@
+@import 'variables';
+
+.tooltip[data-theme~='default'] {
+    background-color: $malachite-green;
+    margin-bottom: 10px;
+    padding: 0 4px;
+    color: $dark-navy;
+    font-weight: 700;
+    font-size: $font-sm;
+}

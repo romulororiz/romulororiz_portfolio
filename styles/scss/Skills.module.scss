@@ -14,7 +14,7 @@
         width: 100%;
 
         &::before {
-            width: 100px;
+            width: 185px;
         }
 
         &::after {
@@ -45,12 +45,13 @@
         font-size: $font-xxl;
 
         &::before {
-            width: 65px;
+            width: 130px;
         }
     }
 
     .icons_grid {
         margin-top: 25px;
         grid-template-columns: repeat(3, 1fr);
+        column-gap: 0;
     }
 }

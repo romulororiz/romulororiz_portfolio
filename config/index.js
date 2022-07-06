@@ -33,8 +33,8 @@ module.exports = {
 		// 	url: '/#experience',
 		// },
 		{
-			name: 'Skills',
-			url: '/#skills',
+			name: 'Tech Stack',
+			url: '/#tech-stack',
 		},
 		{
 			name: 'Projects',
@@ -110,7 +110,7 @@ module.exports = {
 			name: 'Html5',
 		},
 		{
-			name: 'Css',
+			name: 'Css3',
 		},
 		{
 			name: 'Sass',
@@ -122,13 +122,13 @@ module.exports = {
 			name: 'React',
 		},
 		{
-			name: 'Next',
+			name: 'NextJs',
 		},
 		{
-			name: 'Node',
+			name: 'NodeJs',
 		},
 		{
-			name: 'Styled',
+			name: 'Styled Components',
 		},
 		{
 			name: 'Mongodb',

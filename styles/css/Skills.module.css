@@ -77,7 +77,7 @@
   z-index: -2;
 }
 .skills h1::before {
-  width: 100px;
+  width: 185px;
 }
 .skills h1::after {
   width: 100%;
@@ -104,11 +104,14 @@
     font-size: 22px;
   }
   .skills h1::before {
-    width: 65px;
+    width: 130px;
   }
 
   .icons_grid {
     margin-top: 25px;
     grid-template-columns: repeat(3, 1fr);
+    -webkit-column-gap: 0;
+       -moz-column-gap: 0;
+            column-gap: 0;
   }
 }

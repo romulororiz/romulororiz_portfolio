@@ -9,6 +9,7 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"@tippyjs/react": "^4.2.6",
 		"embla-carousel-react": "^7.0.0-rc01",
 		"next": "12.1.6",
 		"react": "18.2.0",
