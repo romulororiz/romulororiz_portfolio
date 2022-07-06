@@ -10,7 +10,7 @@ const Tooltip = ({ name, children }) => {
 			theme='default'
 			className={styles.tooltip}
 			content={name}
-			arrow={true}
+			arrow={false}
 		>
 			{children}
 		</Tippy>

@@ -108,7 +108,7 @@
   }
 
   .icons_grid {
-    margin-top: 25px;
+    margin-top: 0;
     grid-template-columns: repeat(3, 1fr);
     -webkit-column-gap: 0;
        -moz-column-gap: 0;

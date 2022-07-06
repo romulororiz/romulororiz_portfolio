@@ -1,10 +1,19 @@
 @import 'variables';
 
 .tooltip[data-theme~='default'] {
-    background-color: $malachite-green;
-    margin-bottom: 10px;
+    background-color: transparent;
+    border: 2px solid $malachite-green;
     padding: 0 4px;
-    color: $dark-navy;
+    color: $malachite-green;
     font-weight: 700;
     font-size: $font-sm;
+    text-transform: uppercase;
+
+    @media ($desktopXS) {
+        font-size: $font-xxs;
+    }
+
+    @media ($mobileL) {
+        font-size: 10px;
+    }
 }
