@@ -2,14 +2,18 @@
 
 .about {
     @include flexCenter;
-    flex-direction: column;
     align-items: flex-start;
     min-height: 100vh;
+    flex-direction: column;
 
     h1 {
         @include heading;
         @include headingLine;
         width: 50%;
+
+        &::after {
+            width: 95%;
+        }
     }
 }
 

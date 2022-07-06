@@ -1,7 +1,6 @@
 import styles from '@/styles/Skills.module.scss';
 import Icon from '@/components/icons/icon';
 import { icons } from '@/config/index';
-import Tooltip from '../Tooltip';
 
 const Skills = () => {
 	return (

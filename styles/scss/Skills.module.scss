@@ -3,10 +3,7 @@
 .skills {
     @include flexCenter;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
     min-height: 100vh;
-    padding-top: 80px;
 
     h1 {
         @include heading;
@@ -15,10 +12,6 @@
 
         &::before {
             width: 185px;
-        }
-
-        &::after {
-            width: 100%;
         }
     }
 }

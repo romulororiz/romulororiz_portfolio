@@ -23,7 +23,6 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  justify-content: center;
   min-height: 100vh;
 }
 .hero h1 {
