@@ -44,16 +44,16 @@ body {
   line-height: 1.3;
   position: relative;
 
-  &::before {
+  //todo fix z-index linha 
+  &::after {
       content: "";
-      display: block;
       position: fixed;
+      background-image: url('/assets/noise.svg');
       left: 0;
       top: 0;
       width: 100%;
       height: 100%;
-      z-index: -10;
-      background-image: url('/assets/noise.svg');
+      z-index: -999;
   }
 }
 

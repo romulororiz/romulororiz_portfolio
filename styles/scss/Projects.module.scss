@@ -15,3 +15,13 @@
         }
     }
 }
+
+@media ($mobileL) {
+    .projects h1 {
+        font-size: $font-xxl;
+
+        &::before {
+            width: 100px;
+        }
+    }
+}

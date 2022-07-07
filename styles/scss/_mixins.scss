@@ -133,7 +133,6 @@
     color: $lightest-slate;
     position: relative;
     padding-right: 15px;
-    @include headingLine;
 }
 
 @mixin headingLine {
@@ -146,8 +145,6 @@
         height: 100%;
         background-color: $dark-navy;
         z-index: -1;
-
-       
     }
 
     &::after {
