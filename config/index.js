@@ -147,4 +147,40 @@ module.exports = {
 			name: 'Express',
 		},
 	],
+
+	projects: [
+		{
+			id: 1,
+			name: 'A Vida + Rica',
+			description:
+				'A Brazilian financial blog specialized in Investing, Personal Finances and Entrepreneurship. You can scroll over the recent posts and look for the category that best suits your needs, check the categories dropdown or easily search for a specific keyword in the search bar',
+			url: 'https://avidamaisrica.com',
+			image: '/assets/project1.jpg',
+			stack: [
+				'NextJs',
+				'Vanilla Css',
+				'Strapi Headless CMS',
+				'Heroku',
+				'Vercel',
+			],
+		},
+		{
+			id: 2,
+			name: 'Personal Portfolio',
+			description:
+				'A minimalistic portfolio website that gave so much joy in building it. It really translates to the screen what I think and love to do in Frontend Development.',
+			url: 'https://romulororiz.com',
+			image: '/assets/project2.jpg',
+			stack: ['NextJs', 'Sass', 'Vercel'],
+		},
+		{
+			id: 3,
+			name: 'Rick and Morty Characteropedia',
+			description:
+				'A Rick and Morty Hub for you to easily get the information you seek on your favorite characters of the best show ever made',
+			url: '',
+			image: '/assets/project3.jpg',
+			stack: ['NextJs', 'Vanilla Css', 'Rick and Morty API', 'Vercel'],
+		},
+	],
 };

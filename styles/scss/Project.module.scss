@@ -1,0 +1,60 @@
+@import 'variables', 'mixins';
+
+.project_wrapper {
+    width: 100%;
+    margin-top: 55px;
+    @include flexCenter;
+    justify-content: flex-start; 
+}
+
+.project_image_wrapper {
+    width: 50%;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        background-color: transparent;
+        border: 2px solid $islamic-green;
+        opacity: .35;
+        z-index: -1;
+        transition: $transition;
+    }
+}
+
+.project_image {
+    display: flex;
+    border-radius: $border-radius;
+    position: relative;
+    overflow:hidden;
+    border-radius: 8px;
+
+    // // &::after {
+    // //     content: '';
+    // //     transition: $transition;
+    // //     position: absolute;
+    // //     top: 0;
+    // //     left: 0;
+    // //     width: 100%;
+    // //     height: 100%;
+    // //     background-color: rgba($malachite-green,.15);
+    // // }
+
+    // &:hover::after {
+    //     background-color: transparent;
+    // }
+}
+
+.project_content {
+    @include flexCenter;
+    width: 50%;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}

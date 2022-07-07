@@ -44,6 +44,7 @@
         z-index: -1;
         background-color: $dark-slate;
         transition: $transition;
+        animation: lineDown 3.5s ease-in-out;
     }
 
     @media (max-width: 1170px) {
@@ -58,6 +59,17 @@
         }
     }
 
+}
+
+// Key frame line hight
+@keyframes lineDown {
+    0% {
+        height: 0%;
+    }
+
+    100% {
+        height: 100vh;
+    }
 }
 
 

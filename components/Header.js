@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import styles from '@/styles/Header.module.scss';
 import useScrollDirection from 'hooks/useScrollDirection';
 import useOnClickOutside from 'hooks/useOnClickOutside';
+import 'animate.css';
 
 const logo = (
 	<>
@@ -88,14 +89,16 @@ const Header = () => {
 					<ol>
 						{navLinks &&
 							navLinks.map(({ url, name }, i) => (
-								<li key={i}>
+								<li
+									key={i}
+									// className={`animate__animated animate__zoomIn animate__delay-${
+									// 	i * 1
+									// }s animate__faster`}
+								>
 									<Link href={url}>{name}</Link>
 								</li>
 							))}
 					</ol>
-					{/* <a className={styles.btn} href='#' rel='noopener noreferrer'>
-						Resume
-					</a> */}
 				</div>
 
 				{/* Hamburger Menu */}

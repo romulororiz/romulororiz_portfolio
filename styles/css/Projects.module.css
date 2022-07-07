@@ -50,7 +50,7 @@
   z-index: -2;
 }
 .projects h1::before {
-  width: 145px;
+  width: 140px;
 }
 
 @media (max-width: 480px) {
