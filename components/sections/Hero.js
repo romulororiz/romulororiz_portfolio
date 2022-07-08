@@ -1,7 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
+import { useEffect } from 'react';
+import 'animate.css';
 import styles from '@/styles/Hero.module.scss';
 
-const itemOne = <h1>Hi, my name is</h1>;
+const itemOne = <h1>Hi there, my name is</h1>;
 const itemTwo = <h2>Romulo Roriz</h2>;
 const itemThree = (
 	<h2 className={styles.heading}>

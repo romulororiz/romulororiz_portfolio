@@ -2,12 +2,12 @@
 
 // Nav Desktop
 .header {
-    @include headerNav;
-    @media ($desktopM) {
-      .nav_desktop {
-        display: none !important;
-      }
+  @include headerNav;
+  @media ($desktopM) {
+    .nav_desktop {
+      display: none !important;
     }
+  }
 }
 
 .scrollUp {
@@ -144,4 +144,3 @@
 .active {
   transform: translateX(0%);
 }
-

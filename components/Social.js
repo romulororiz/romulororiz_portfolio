@@ -1,4 +1,5 @@
 import styles from '@/styles/Social.module.scss';
+import { useEffect } from 'react';
 import {
 	FaGithub,
 	FaInstagram,
@@ -9,8 +10,18 @@ import {
 import { socialMedia } from '../config';
 
 const Social = () => {
+	useEffect(() => {
+		setTimeout(() => {
+			document.getElementById('line').classList.add(styles.line);
+			document
+				.getElementById('social')
+				.classList.add(`animate__animated`, `animate__fadeInLeft`);
+			document.getElementById('social').classList.remove(styles.no_opacity);
+		}, 1000);
+	}, []);
+
 	return (
-		<div className={styles.social}>
+		<div className={`${styles.social} ${styles.no_opacity}`} id='social'>
 			<a href={socialMedia[1].url} target='_blank' rel='noreferrer noopener'>
 				<FaInstagram className={styles.icon} />
 			</a>
@@ -28,7 +39,7 @@ const Social = () => {
 			<a href={socialMedia[4].url} target='_blank' rel='noreferrer noopener'>
 				<FaAt className={styles.icon} />
 			</a>
-			<span className={styles.line}></span>
+			<span id='line'></span>
 		</div>
 	);
 };

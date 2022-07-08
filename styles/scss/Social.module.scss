@@ -44,7 +44,7 @@
         z-index: -1;
         background-color: $dark-slate;
         transition: $transition;
-        animation: lineDown 3.5s ease-in-out;
+        animation: lineDown 2s ease-in-out;
     }
 
     @media (max-width: 1170px) {
@@ -58,7 +58,10 @@
             font-size: 26px;
         }
     }
+}
 
+.no_opacity {
+    visibility: hidden;
 }
 
 // Key frame line hight
