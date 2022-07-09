@@ -27,9 +27,8 @@
 @mixin btnTheme($backgroundColor, $btnColor, $fontSize, $fontWeight, $textColor) {
     background-color: $backgroundColor;
     padding: 10px 20px;
-    display: inline-block;
-    border-radius: $border-radius;
     border: 1px solid $btnColor;
+    border-radius: $border-radius;
     -webkit-border-radius: $border-radius;
 	-moz-border-radius: $border-radius;
     outline: none;

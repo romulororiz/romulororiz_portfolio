@@ -3,7 +3,7 @@
 @import 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap';
 @import 'https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700&display=swap';
 .icon {
-  font-size: 90px;
+  font-size: 75px;
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   position: relative;
