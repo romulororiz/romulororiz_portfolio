@@ -1,17 +1,23 @@
 import styles from '@/styles/Project.module.scss';
 import Image from 'components/Image';
 
-const Project = ({ id, name, description, url, image, stack }) => {
+const Project = ({ name, description, url, image, stack }) => {
 	return (
-		<div
-			className={`${styles.project_wrapper} ${id % 2 === 0 && styles.reverse}`}
-		>
+		<div className={styles.project_wrapper}>
 			<div className={styles.project_image_wrapper}>
-				<div className={styles.project_image}>
-					<Image src={image} width={500} height={420} alt={''} />
+				<Image src={image} width={650} height={500} alt={''} />
+			</div>
+			<div className={styles.project_content}>
+				<h2>{name}</h2>
+				<div className={styles.description_wrapper}>
+					<p>{description}</p>
+					<div className={styles.stack}>
+						{stack.map((item, i) => (
+							<p key={i}>{item}</p>
+						))}
+					</div>
 				</div>
 			</div>
-			<div className={styles.project_content}>asdasd</div>
 		</div>
 	);
 };

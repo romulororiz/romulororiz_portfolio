@@ -155,14 +155,9 @@ module.exports = {
 			description:
 				'A Brazilian financial blog specialized in Investing, Personal Finances and Entrepreneurship. You can scroll over the recent posts and look for the category that best suits your needs, check the categories dropdown or easily search for a specific keyword in the search bar',
 			url: 'https://avidamaisrica.com',
-			image: '/assets/project1.jpg',
-			stack: [
-				'NextJs',
-				'Vanilla Css',
-				'Strapi Headless CMS',
-				'Heroku',
-				'Vercel',
-			],
+			image:
+				'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80',
+			stack: ['NextJs', 'Vanilla Css', 'Strapi CMS', 'Heroku', 'Vercel'],
 		},
 		{
 			id: 2,
@@ -175,6 +170,25 @@ module.exports = {
 		},
 		{
 			id: 3,
+			name: 'Rick and Morty Characteropedia',
+			description:
+				'A Rick and Morty Hub for you to easily get the information you seek on your favorite characters of the best show ever made',
+			url: '',
+			image: '/assets/project3.jpg',
+			stack: ['NextJs', 'Vanilla Css', 'Rick and Morty API', 'Vercel'],
+		},
+		{
+			id: 4,
+			name: 'A Vida + Rica',
+			description:
+				'A Brazilian financial blog specialized in Investing, Personal Finances and Entrepreneurship. You can scroll over the recent posts and look for the category that best suits your needs, check the categories dropdown or easily search for a specific keyword in the search bar',
+			url: 'https://avidamaisrica.com',
+			image:
+				'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80',
+			stack: ['NextJs', 'Vanilla Css', 'Strapi CMS', 'Heroku', 'Vercel'],
+		},
+		{
+			id: 5,
 			name: 'Rick and Morty Characteropedia',
 			description:
 				'A Rick and Morty Hub for you to easily get the information you seek on your favorite characters of the best show ever made',

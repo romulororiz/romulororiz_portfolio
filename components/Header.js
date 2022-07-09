@@ -60,11 +60,13 @@ const Header = () => {
 
 	// todo
 	// Close mobile menu when click outside
-	const menuWrapperRef = useRef();
-	useOnClickOutside(
-		menuWrapperRef,
-		useCallback(() => {}, [])
-	);
+	// const menuWrapperRef = useRef();
+	// useOnClickOutside(
+	// 	menuWrapperRef,
+	// 	useCallback(() => {
+	// 		setShowMenu(false)
+	// 	}, [])
+	// );
 
 	return (
 		<div
@@ -109,10 +111,7 @@ const Header = () => {
 			</label>
 
 			{/* Nav Mobile */}
-			<div
-				className={`${styles.nav_mobile} ${showMenu && styles.active}`}
-				ref={menuWrapperRef}
-			>
+			<div className={`${styles.nav_mobile} ${showMenu && styles.active}`}>
 				<ol>
 					{navLinks &&
 						navLinks.map(({ url, name }, i) => (

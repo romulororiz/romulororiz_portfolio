@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import { BsArrowLeftSquare, BsArrowRightSquare } from 'react-icons/bs';
 import Image from '@/components/Image';
 import { slides, about } from '@/config/index';
+import { BsArrowLeftSquare, BsArrowRightSquare } from 'react-icons/bs';
 import { disablePrevNextBtns, setupPrevNextBtns } from '@/utils/emblaConf';
 import DotBtn from '@/components/DotBtn';
 import styles from '@/styles/About.module.scss';
@@ -16,7 +16,6 @@ const About = () => {
 	const [slideFive, setSlideFive] = useState(false);
 	const [selectedIndex, setSelectedIndex] = useState(0);
 	const [scrollSnaps, setScrollSnaps] = useState([]);
-	// const [windowDimension, setWindowDimension] = useState(0);
 	const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
 
 	// Carousel Dots

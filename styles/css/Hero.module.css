@@ -76,3 +76,7 @@
     font-size: 14px;
   }
 }
+
+.no_opacity {
+  visibility: hidden;
+}

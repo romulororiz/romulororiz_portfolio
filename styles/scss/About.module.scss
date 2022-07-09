@@ -102,10 +102,6 @@
     display: flex;
     justify-content: space-around;
 
-    &:hover.carousel_container {
-        border: 1px solid red;
-    }
-
     .embla_prev_disabled, .embla_next_disabled {
         pointer-events: none;
         opacity: .15 !important;

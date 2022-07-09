@@ -53,6 +53,91 @@
   width: 140px;
 }
 
+.carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+.carousel:hover::after {
+  opacity: 1;
+}
+.carousel:hover .carousel_slide::after {
+  background-color: transparent;
+}
+
+.carousel_viewport {
+  overflow: hidden;
+}
+
+.carousel_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.carousel_slide {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.carousel_slide:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.carousel_btns {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.carousel_btns .embla_prev_disabled, .carousel_btns .embla_next_disabled {
+  pointer-events: none;
+  opacity: 0.15 !important;
+}
+.carousel_btns .icon {
+  opacity: 0.35;
+  font-size: 48px;
+  cursor: pointer;
+  color: #02c733;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.carousel_btns .icon:hover {
+  opacity: 1;
+}
+
+.carousel_dots {
+  position: absolute;
+  display: none;
+  width: 45%;
+  bottom: -40px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 @media (max-width: 480px) {
   .projects h1 {
     font-size: 22px;
