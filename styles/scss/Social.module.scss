@@ -9,31 +9,10 @@
     flex-direction: column;
     gap: 10px;
 
-    &:hover > .caret_down {
-        color: $malachite-green;
-    }
-
     &:hover .line {
         background-color: $malachite-green;
     }
 
-    .icon {
-        font-size: 36px;
-        cursor: pointer;
-        transition: $transition;
-        position: relative;
-        padding: 6px;
-        background-color: $dark-slate;
-        border-radius: 10px;
-        color: $dark-navy;
-        position: relative;
-
-        &:hover {
-            transform: translateY(-3px);
-            background-color: $malachite-green;
-        }
-    }
-    
     .line {
         position: absolute;
         left: 50%;
@@ -44,7 +23,7 @@
         z-index: -1;
         background-color: $dark-slate;
         transition: $transition;
-        animation: lineDown 2s ease-in-out;
+        animation: lineDown 3s ease-in-out;
     }
 
     @media (max-width: 1170px) {

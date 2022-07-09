@@ -17,27 +17,7 @@
           flex-direction: column;
   gap: 10px;
 }
-.social:hover > .caret_down {
-  color: #02c733;
-}
 .social:hover .line {
-  background-color: #02c733;
-}
-.social .icon {
-  font-size: 36px;
-  cursor: pointer;
-  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  position: relative;
-  padding: 6px;
-  background-color: #495670;
-  border-radius: 10px;
-  color: #091729;
-  position: relative;
-}
-.social .icon:hover {
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
   background-color: #02c733;
 }
 .social .line {
@@ -52,8 +32,8 @@
   background-color: #495670;
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -webkit-animation: lineDown 2s ease-in-out;
-          animation: lineDown 2s ease-in-out;
+  -webkit-animation: lineDown 3s ease-in-out;
+          animation: lineDown 3s ease-in-out;
 }
 @media (max-width: 1170px) {
   .social {

@@ -1,4 +1,3 @@
-import styles from '@/styles/Social.module.scss';
 import { useEffect } from 'react';
 import {
 	FaGithub,
@@ -7,7 +6,9 @@ import {
 	FaTwitter,
 	FaAt,
 } from 'react-icons/fa';
-import { socialMedia } from '../config';
+import { socialMedia } from '@/config/index';
+import Icon from '@/components/icons/icon';
+import styles from '@/styles/Social.module.scss';
 
 const Social = () => {
 	useEffect(() => {
@@ -17,29 +18,17 @@ const Social = () => {
 				.getElementById('social')
 				.classList.add(`animate__animated`, `animate__fadeInLeft`);
 			document.getElementById('social').classList.remove(styles.no_opacity);
-		}, 1000);
+		}, 2000);
 	}, []);
 
 	return (
 		<div className={`${styles.social} ${styles.no_opacity}`} id='social'>
-			<a href={socialMedia[1].url} target='_blank' rel='noreferrer noopener'>
-				<FaInstagram className={styles.icon} />
-			</a>
-			<a href={socialMedia[2].url} target='_blank' rel='noreferrer noopener'>
-				<FaLinkedinIn className={styles.icon} />
-			</a>
-
-			<a href={socialMedia[0].url} target='_blank' rel='noreferrer noopener'>
-				<FaGithub className={styles.icon} />
-			</a>
-			<a href={socialMedia[3].url} target='_blank' rel='noreferrer noopener'>
-				<FaTwitter className={styles.icon} />
-			</a>
-
-			<a href={socialMedia[4].url} target='_blank' rel='noreferrer noopener'>
-				<FaAt className={styles.icon} />
-			</a>
-			<span id='line'></span>
+			{socialMedia.map(({ name, url }, i) => (
+				<a key={i} href={url} target='_blank' rel='noreferrer noopener'>
+					<Icon name={name} />
+					<span id='line'></span>
+				</a>
+			))}
 		</div>
 	);
 };

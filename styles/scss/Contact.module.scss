@@ -1,0 +1,17 @@
+@import 'variables', 'mixins';
+
+.contact {
+    @include flexCenter;
+    flex-direction: column;
+    min-height: 100vh;
+
+    h1 {
+        @include heading;
+        @include headingLine;
+        width: 100%;
+
+        &::before {
+            width: 135px;
+        }
+    }
+}

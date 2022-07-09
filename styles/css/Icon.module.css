@@ -29,6 +29,24 @@
   }
 }
 
+.social_icon {
+  font-size: 36px;
+  cursor: pointer;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: relative;
+  padding: 6px;
+  background-color: #495670;
+  border-radius: 10px;
+  color: #091729;
+  position: relative;
+}
+.social_icon:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  background-color: #02c733;
+}
+
 .caretR {
   position: absolute;
   color: #02c733;

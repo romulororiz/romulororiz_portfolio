@@ -105,9 +105,6 @@ module.exports = {
 			name: 'Git',
 		},
 		{
-			name: 'Github',
-		},
-		{
 			name: 'Html5',
 		},
 		{

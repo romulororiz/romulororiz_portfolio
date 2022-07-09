@@ -9,6 +9,7 @@ import {
 	FaCss3,
 	FaReact,
 	FaNodeJs,
+	FaAt,
 } from 'react-icons/fa';
 import { TbBrandNextjs } from 'react-icons/tb';
 import { IoLogoJavascript } from 'react-icons/io';
@@ -22,139 +23,47 @@ import {
 } from 'react-icons/si';
 import { BsCaretRight } from 'react-icons/bs';
 import styles from '@/styles/Icon.module.scss';
-import Tooltip from '@/components/Tooltip';
 
 const Icon = ({ name }) => {
-	
-
-
 	switch (name) {
 		case 'Instagram':
-			return <FaInstagram className={styles.icon} />;
+			return <FaInstagram className={styles.social_icon} />;
 		case 'Twitter':
-			return <FaTwitter className={styles.icon} />;
+			return <FaTwitter className={styles.social_icon} />;
 		case 'Github':
-			return (
-				<Tooltip name={name}>
-					<span>
-						<FaGithub className={styles.icon} />
-					</span>
-				</Tooltip>
-			);
+			return <FaGithub className={styles.social_icon} />;
 		case 'Linkedin':
-			return <FaLinkedin className={styles.icon} />;
+			return <FaLinkedin className={styles.social_icon} />;
 		case 'Git':
-			return (
-				<Tooltip name={name}>
-					<span>
-						<FaGitAlt className={styles.icon} />
-					</span>
-				</Tooltip>
-			);
+			return <FaGitAlt className={styles.icon} />;
 		case 'Html5':
-			return (
-				<Tooltip name={name}>
-					<span>
-						<FaHtml5 className={styles.icon} />
-					</span>
-				</Tooltip>
-			);
+			return <FaHtml5 className={styles.icon} />;
 		case 'Css3':
-			return (
-				<Tooltip name={name}>
-					<span>
-						<FaCss3 className={styles.icon} />
-					</span>
-				</Tooltip>
-			);
+			return <FaCss3 className={styles.icon} />;
 		case 'Sass':
-			return (
-				<Tooltip name={name}>
-					<span>
-						<FaSass className={styles.icon} />
-					</span>
-				</Tooltip>
-			);
+			return <FaSass className={styles.icon} />;
 		case 'Javascript':
-			return (
-				<Tooltip name={name}>
-					<span>
-						<IoLogoJavascript className={styles.icon} />
-					</span>
-				</Tooltip>
-			);
+			return <IoLogoJavascript className={styles.icon} />;
 		case 'React':
-			return (
-				<Tooltip name={name}>
-					<span>
-						<FaReact className={styles.icon} />
-					</span>
-				</Tooltip>
-			);
+			return <FaReact className={styles.icon} />;
 		case 'NextJs':
-			return (
-				<Tooltip name={name}>
-					<span>
-						<TbBrandNextjs className={styles.icon} />
-					</span>
-				</Tooltip>
-			);
+			return <TbBrandNextjs className={styles.icon} />;
 		case 'NodeJs':
-			return (
-				<Tooltip name={name}>
-					<span>
-						<FaNodeJs className={styles.icon} />
-					</span>
-				</Tooltip>
-			);
+			return <FaNodeJs className={styles.icon} />;
 		case 'Styled Components':
-			return (
-				<Tooltip name={name}>
-					<span>
-						<SiStyledcomponents className={styles.icon} />
-					</span>
-				</Tooltip>
-			);
+			return <SiStyledcomponents className={styles.icon} />;
 		case 'Mongodb':
-			return (
-				<Tooltip name={name}>
-					<span>
-						<SiMongodb className={styles.icon} />
-					</span>
-				</Tooltip>
-			);
+			return <SiMongodb className={styles.icon} />;
 		case 'Heroku':
-			return (
-				<Tooltip name={name}>
-					<span>
-						<SiHeroku className={styles.icon} />
-					</span>
-				</Tooltip>
-			);
+			return <SiHeroku className={styles.icon} />;
 		case 'Redux':
-			return (
-				<Tooltip name={name}>
-					<span>
-						<SiRedux className={styles.icon} />
-					</span>
-				</Tooltip>
-			);
+			return <SiRedux className={styles.icon} />;
 		case 'Express':
-			return (
-				<Tooltip name={name}>
-					<span>
-						<SiExpress className={styles.icon} />
-					</span>
-				</Tooltip>
-			);
+			return <SiExpress className={styles.icon} />;
 		case 'Postman':
-			return (
-				<Tooltip name={name}>
-					<span>
-						<SiPostman className={styles.icon} />
-					</span>
-				</Tooltip>
-			);
+			return <SiPostman className={styles.icon} />;
+		case 'Email':
+			return <FaAt className={styles.social_icon} />;
 		case 'caretR':
 			return <BsCaretRight className={styles.caretR} />;
 		default:

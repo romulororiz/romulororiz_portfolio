@@ -1,6 +1,7 @@
 import styles from '@/styles/Skills.module.scss';
 import Icon from '@/components/icons/icon';
 import { icons } from '@/config/index';
+import Tooltip from '@/components/Tooltip';
 
 const Skills = () => {
 	return (
@@ -11,7 +12,11 @@ const Skills = () => {
 			</h1>
 			<div className={styles.icons_grid}>
 				{icons.map((icon, i) => (
-					<Icon key={i} name={icon.name} />
+					<Tooltip key={i} name={icon.name}>
+						<span>
+							<Icon name={icon.name} />
+						</span>
+					</Tooltip>
 				))}
 			</div>
 		</div>
