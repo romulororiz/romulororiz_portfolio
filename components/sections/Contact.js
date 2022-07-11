@@ -3,6 +3,7 @@ import Icon from '@/components/icons/icon';
 import styles from '@/styles/Contact.module.scss';
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
 	const [formData, setFormData] = useState({
@@ -47,11 +48,23 @@ const Contact = () => {
 	};
 
 	return (
-		<div className={styles.contact} id='contact'>
+		<motion.div
+			initial={{ y: 100, opacity: 0 }}
+			whileInView={{ y: 0, opacity: 1 }}
+			viewport={{ once: 'true', amount: 'some' }}
+			transition={{ duration: 1.2 }}
+			className={styles.contact}
+			id='contact'
+		>
 			<h1>
 				<Icon name='caretR' />
 				Contact
-				<span>Get in touch! I'll get back to you as soon as possible!</span>
+				<motion.span
+					initial={{ x: 100, opacity: 0 }}
+					whileInView={{ x: 0, opacity: 1 }}
+					viewport={{ once: 'true', amount: 'some' }}
+					transition={{ duration: 1.2 }}
+				>Get in touch! I'll get back to you as soon as possible!</motion.span>
 			</h1>
 			<div className={styles.contactForm}>
 				{!messageSent ? (
@@ -124,7 +137,7 @@ const Contact = () => {
 					</div>
 				)}
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

@@ -2,6 +2,7 @@ import styles from '@/styles/Footer.module.scss';
 import { useCallback, useEffect, useState } from 'react';
 import { socialMedia } from '@/config/index';
 import Icon from '@/components/icons/icon';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
 	const [showSocial, setShowSocial] = useState(false);
@@ -23,7 +24,13 @@ const Footer = () => {
 	}, [handleResize]);
 
 	return (
-		<div className={styles.footer}>
+		<motion.div
+			initial={{ opacity: 0 }}
+			whileInView={{ opacity: 1 }}
+			viewport={{ once: 'true', amount: 'some' }}
+			transition={{ duration: 0.8 }}
+			className={styles.footer}
+		>
 			<div className={styles.social}>
 				{showSocial &&
 					socialMedia.map(({ name, url }, i) => (
@@ -33,7 +40,7 @@ const Footer = () => {
 					))}
 			</div>
 			<p>&copy; Romulo Roriz 2022</p>
-		</div>
+		</motion.div>
 	);
 };
 

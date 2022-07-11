@@ -3,7 +3,7 @@ import { navLinks } from '@/config/index';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import styles from '@/styles/Header.module.scss';
 import useScrollDirection from 'hooks/useScrollDirection';
-import useOnClickOutside from 'hooks/useOnClickOutside';
+import { motion } from 'framer-motion';
 import 'animate.css';
 
 const logo = (
@@ -57,16 +57,6 @@ const Header = () => {
 			window.addEventListener('resize', handleResize);
 		};
 	}, [handleResize, showMenu]);
-
-	// todo
-	// Close mobile menu when click outside
-	// const menuWrapperRef = useRef();
-	// useOnClickOutside(
-	// 	menuWrapperRef,
-	// 	useCallback(() => {
-	// 		setShowMenu(false)
-	// 	}, [])
-	// );
 
 	return (
 		<div

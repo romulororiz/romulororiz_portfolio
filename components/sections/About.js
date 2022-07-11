@@ -7,6 +7,7 @@ import { disablePrevNextBtns, setupPrevNextBtns } from '@/utils/emblaConf';
 import DotBtn from '@/components/DotBtn';
 import styles from '@/styles/About.module.scss';
 import Icon from '@/components/icons/icon';
+import { motion } from 'framer-motion';
 
 const About = () => {
 	const [slideOne, setSlideOne] = useState(true);
@@ -71,11 +72,25 @@ const About = () => {
 	const { canScrollNext, canScrollPrev } = disablePrevNextBtns(emblaApi);
 
 	return (
-		<div id='about' className={styles.about}>
+		<motion.div
+			initial={{ y: 100, opacity: 0 }}
+			whileInView={{ y: 0, opacity: 1 }}
+			viewport={{ once: 'true', amount: 'some' }}
+			transition={{ duration: 1.2 }}
+			id='about'
+			className={styles.about}
+		>
 			<h1>
 				<Icon name='caretR' />
 				About Me
-				<span>Some facts about yours truly</span>
+				<motion.span
+					initial={{ x: 100, opacity: 0 }}
+					whileInView={{ x: 0, opacity: 1 }}
+					viewport={{ once: 'true', amount: 'some' }}
+					transition={{ duration: 1.2 }}
+				>
+					Some facts about yours truly
+				</motion.span>
 			</h1>
 			<div className={styles.about_grid}>
 				<p className={styles.about_text}>
@@ -130,7 +145,7 @@ const About = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

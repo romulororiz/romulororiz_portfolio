@@ -1,35 +1,31 @@
 import { useEffect } from 'react';
-import {
-	FaGithub,
-	FaInstagram,
-	FaLinkedinIn,
-	FaTwitter,
-	FaAt,
-} from 'react-icons/fa';
 import { socialMedia } from '@/config/index';
 import Icon from '@/components/icons/icon';
 import styles from '@/styles/Social.module.scss';
+import { motion } from 'framer-motion';
 
 const Social = () => {
 	useEffect(() => {
 		setTimeout(() => {
 			document.getElementById('line').classList.add(styles.line);
-			document
-				.getElementById('social')
-				.classList.add(`animate__animated`, `animate__fadeInLeft`);
-			document.getElementById('social').classList.remove(styles.no_opacity);
-		}, 2000);
+		}, 2200);
 	}, []);
 
 	return (
-		<div className={`${styles.social} ${styles.no_opacity}`} id='social'>
+		<motion.div
+			initial={{ x: -100, opacity: 0 }}
+			animate={{ x: 0, opacity: 1 }}
+			transition={{ duration: 1, delay: 1.5 }}
+			className={`${styles.social}`}
+			id='social'
+		>
 			{socialMedia.map(({ name, url }, i) => (
 				<a key={i} href={url} target='_blank' rel='noreferrer noopener'>
 					<Icon name={name} />
 					<span id='line'></span>
 				</a>
 			))}
-		</div>
+		</motion.div>
 	);
 };
 

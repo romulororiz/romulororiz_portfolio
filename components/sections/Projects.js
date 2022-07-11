@@ -7,6 +7,7 @@ import { BsArrowLeftSquare, BsArrowRightSquare } from 'react-icons/bs';
 import { disablePrevNextBtns, setupPrevNextBtns } from '@/utils/emblaConf';
 import DotBtn from '@/components/DotBtn';
 import { useCallback, useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 const Projects = () => {
 	const [scrollSnaps, setScrollSnaps] = useState([]);
@@ -38,11 +39,25 @@ const Projects = () => {
 	const { canScrollNext, canScrollPrev } = disablePrevNextBtns(emblaApi);
 
 	return (
-		<div className={styles.projects} id='projects'>
+		<motion.div
+			initial={{ y: 100, opacity: 0 }}
+			whileInView={{ y: 0, opacity: 1 }}
+			viewport={{ once: 'true', amount: 'some' }}
+			transition={{ duration: 1.2 }}
+			className={styles.projects}
+			id='projects'
+		>
 			<h1>
 				<Icon name='caretR' />
 				Projects
-				<span>Some of my latest projects and technologies used in each of them</span>
+				<motion.span
+					initial={{ x: 100, opacity: 0 }}
+					whileInView={{ x: 0, opacity: 1 }}
+					viewport={{ once: 'true', amount: 'some' }}
+					transition={{ duration: 1.2 }}
+				>
+					Some of my latest projects and technologies used in each of them
+				</motion.span>
 			</h1>
 			<div className={styles.carousel}>
 				<div className={styles.carousel_viewport} ref={emblaRef}>
@@ -92,7 +107,7 @@ const Projects = () => {
 					))}
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

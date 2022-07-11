@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useEffect } from 'react';
-import 'animate.css';
 import styles from '@/styles/Hero.module.scss';
-
+import { motion } from 'framer-motion';
+import useWindowSize from 'hooks/useWindowSize';
+import { useEffect, useState } from 'react';
 const itemOne = <h1>Hi there, my name is</h1>;
 const itemTwo = <h2>Romulo Roriz</h2>;
 const itemThree = (
@@ -21,10 +21,19 @@ const itemFour = (
 const heroItems = [itemOne, itemTwo, itemThree, itemFour];
 
 const Hero = () => {
+	//todo use windowSize hook for mobile value
+
 	return (
 		<div className={styles.hero}>
 			{heroItems.map((item, i) => (
-				<div key={i}>{item}</div>
+				<motion.div
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ delay: 1, duration: 0.7 }}
+					key={i}
+				>
+					{item}
+				</motion.div>
 			))}
 		</div>
 	);
