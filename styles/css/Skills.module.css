@@ -52,6 +52,15 @@
 .skills h1::before {
   width: 185px;
 }
+.skills .icon_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 
 .icons_grid {
   width: 100%;

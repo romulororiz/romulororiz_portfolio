@@ -1,0 +1,23 @@
+@import 'variables', 'mixins';
+
+.progressBarWrapper {
+    @include flexCenter;
+    margin-top: 5px;
+    width: 100%;
+    height: 5px;
+    border-radius: 30px;
+    border: 1px solid $malachite-green;
+    background-color: transparent;
+    position: relative;
+    transition: $transition;
+
+    span { 
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: $malachite-green;
+    }
+}
+
+

@@ -103,45 +103,59 @@ module.exports = {
 	icons: [
 		{
 			name: 'Git',
+			percentage: '75%',
 		},
 		{
 			name: 'Html5',
+			percentage: '100%',
 		},
 		{
 			name: 'Css3',
+			percentage: '100%',
 		},
 		{
 			name: 'Sass',
+			percentage: '95%',
 		},
 		{
 			name: 'Javascript',
+			percentage: '80%',
 		},
 		{
 			name: 'React',
+			percentage: '95%',
 		},
 		{
 			name: 'NextJs',
+			percentage: '90%',
 		},
 		{
 			name: 'NodeJs',
+			percentage: '80%',
 		},
 		{
 			name: 'Styled Components',
+			percentage: '75%',
 		},
 		{
 			name: 'Mongodb',
+			percentage: '75%',
 		},
 		{
 			name: 'Postman',
+			percentage: '90%',
 		},
 		{
 			name: 'Heroku',
+			percentage: '65%',
 		},
 		{
 			name: 'Redux',
+			percentage: '70%',
 		},
 		{
 			name: 'Express',
+			percentage: '65%',
 		},
 	],
 

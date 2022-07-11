@@ -2,6 +2,7 @@ import styles from '@/styles/Skills.module.scss';
 import Icon from '@/components/icons/icon';
 import { icons } from '@/config/index';
 import Tooltip from '@/components/Tooltip';
+import ProgressBar from '../ProgressBar';
 
 const Skills = () => {
 	return (
@@ -11,12 +12,15 @@ const Skills = () => {
 				Tech Stack
 			</h1>
 			<div className={styles.icons_grid}>
-				{icons.map((icon, i) => (
-					<Tooltip key={i} name={icon.name}>
-						<span>
-							<Icon name={icon.name} />
-						</span>
-					</Tooltip>
+				{icons.map(({ name, percentage }, i) => (
+					<div className={styles.icon_wrapper} key={i}>
+						<Tooltip name={name}>
+							<span>
+								<Icon name={name} />
+								<ProgressBar percentage={percentage} />
+							</span>
+						</Tooltip>
+					</div>
 				))}
 			</div>
 		</div>
