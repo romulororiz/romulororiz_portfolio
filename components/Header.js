@@ -3,7 +3,6 @@ import { navLinks } from '@/config/index';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import styles from '@/styles/Header.module.scss';
 import useScrollDirection from 'hooks/useScrollDirection';
-import { motion } from 'framer-motion';
 import 'animate.css';
 
 const logo = (
