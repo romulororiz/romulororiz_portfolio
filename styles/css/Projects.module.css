@@ -54,6 +54,7 @@
 }
 
 .carousel {
+  margin-top: 35px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,7 +66,7 @@
           align-items: center;
   position: relative;
   width: 100%;
-  height: 600px;
+  height: auto;
 }
 .carousel:hover::after {
   opacity: 1;
@@ -89,11 +90,12 @@
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
+  border-radius: 8px;
+  cursor: -webkit-grab;
+  cursor: grab;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  cursor: -webkit-grab;
-  cursor: grab;
 }
 .carousel_slide:active {
   cursor: -webkit-grabbing;
@@ -102,7 +104,7 @@
 
 .carousel_btns {
   position: absolute;
-  bottom: -60px;
+  bottom: -130px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -132,18 +134,36 @@
 
 .carousel_dots {
   position: absolute;
-  display: none;
-  width: 45%;
-  bottom: -40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 25%;
+  bottom: -50px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
+@media (max-width: 860px) {
+  .carousel_btns {
+    bottom: -115px;
+  }
+}
 @media (max-width: 480px) {
   .projects h1 {
     font-size: 22px;
   }
   .projects h1::before {
     width: 100px;
+  }
+
+  .carousel_btns {
+    width: 100px;
+  }
+  .carousel_btns .icon {
+    font-size: 38px;
+  }
+
+  .carousel_dots {
+    bottom: -40px;
   }
 }

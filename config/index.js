@@ -150,7 +150,7 @@ module.exports = {
 			id: 1,
 			name: 'A Vida + Rica',
 			description:
-				'A Brazilian financial blog specialized in Investing, Personal Finances and Entrepreneurship. You can scroll over the recent posts and look for the category that best suits your needs, check the categories dropdown or easily search for a specific keyword in the search bar',
+				'A financial blog specialized in Investing, Personal Finances and Entrepreneurship. You can scroll over the recent posts, check the categories dropdown or easily search for a specific keyword in the search bar',
 			url: 'https://avidamaisrica.com',
 			image:
 				'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80',
@@ -178,7 +178,7 @@ module.exports = {
 			id: 4,
 			name: 'A Vida + Rica',
 			description:
-				'A Brazilian financial blog specialized in Investing, Personal Finances and Entrepreneurship. You can scroll over the recent posts and look for the category that best suits your needs, check the categories dropdown or easily search for a specific keyword in the search bar',
+				'A financial blog specialized in Investing, Personal Finances and Entrepreneurship. You can scroll over the recent posts, check the categories dropdown or easily search for a specific keyword in the search bar',
 			url: 'https://avidamaisrica.com',
 			image:
 				'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80',

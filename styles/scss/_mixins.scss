@@ -15,7 +15,7 @@
 @mixin flexEnd {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-end;
 }
 
 @mixin flexStart {

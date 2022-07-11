@@ -1,10 +1,10 @@
 import styles from '@/styles/Footer.module.scss';
 import { useCallback, useEffect, useState } from 'react';
-import { socialMedia } from '../config';
-import Icon from './icons/icon';
+import { socialMedia } from '@/config/index';
+import Icon from '@/components/icons/icon';
 
 const Footer = () => {
-	const [showSocial, setShowSocial] = useState('');
+	const [showSocial, setShowSocial] = useState(false);
 
 	const handleResize = useCallback(() => {
 		if (window.innerWidth <= 1170) {
@@ -15,10 +15,10 @@ const Footer = () => {
 	}, []);
 
 	useEffect(() => {
-		window.innerWidth <= 1170 && setShowSocial(true);
+		window.addEventListener('resize', handleResize);
 
 		return () => {
-			window.addEventListener('resize', handleResize);
+			window.removeEventListener('resize', handleResize);
 		};
 	}, [handleResize]);
 
