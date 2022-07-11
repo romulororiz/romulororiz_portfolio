@@ -141,7 +141,7 @@
         }
 
         a:first-child {
-            margin-right: 35px;
+            margin-right: 45px;
         }
         
         .description_wrapper > p {
@@ -154,6 +154,14 @@
             > p {
                 font-size: 8px !important;
             }
+        }
+    }
+}
+
+@media ($mobileL) {
+    .project_content {
+        a:first-child {
+            margin-right: 35px;
         }
     }
 }

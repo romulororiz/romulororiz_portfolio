@@ -10,6 +10,7 @@ const Skills = () => {
 			<h1>
 				<Icon name='caretR' />
 				Tech Stack
+				<span>Some of the technologies I have been messing around with</span>
 			</h1>
 			<div className={styles.icons_grid}>
 				{icons.map(({ name, percentage }, i) => (
@@ -17,7 +18,7 @@ const Skills = () => {
 						<Tooltip name={name}>
 							<span>
 								<Icon name={name} />
-								<ProgressBar percentage={percentage} />
+								<ProgressBar percentage={percentage} />{' '}
 							</span>
 						</Tooltip>
 					</div>

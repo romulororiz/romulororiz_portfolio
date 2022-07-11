@@ -10,6 +10,7 @@
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
+  margin-bottom: -5px;
 }
 @media (max-width: 860px) {
   .tooltip[data-theme~=default] {

@@ -14,6 +14,11 @@
         &::before {
             width: 135px;
         }
+
+        span {
+            @include headingTextOverLine;
+            left: 138px;
+        }
     }
 }
 
@@ -23,11 +28,13 @@
     width: 50%;
 }
 
-// .contactForm input:-webkit-autofill,
-// .contactForm input:-webkit-autofill:hover, 
-// .contactForm input:-webkit-autofill:focus, 
-// .contactForm input:-webkit-autofill:active{
-// }
+.contactForm input:-webkit-autofill,
+.contactForm input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+.contactForm input[data-autocompleted] {
+    background-color: transparent !important;
+}
 
 .formControl {
 	margin: 35px 0;
@@ -181,6 +188,13 @@
 
         &::before {
             width: 95px;
+        }
+
+        span {
+            @include headingTextOverLine;
+            left: 95px;
+            top: -3px !important;
+            font-size: $font-xxs !important;
         }
     }
 

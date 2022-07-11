@@ -146,6 +146,10 @@ module.exports = {
 			percentage: '90%',
 		},
 		{
+			name: 'Vercel',
+			percentage: '85%',
+		},
+		{
 			name: 'Heroku',
 			percentage: '65%',
 		},

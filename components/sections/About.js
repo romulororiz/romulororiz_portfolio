@@ -75,6 +75,7 @@ const About = () => {
 			<h1>
 				<Icon name='caretR' />
 				About Me
+				<span>Some facts about yours truly</span>
 			</h1>
 			<div className={styles.about_grid}>
 				<p className={styles.about_text}>

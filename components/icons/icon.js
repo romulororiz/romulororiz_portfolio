@@ -21,6 +21,7 @@ import {
 	SiRedux,
 	SiExpress,
 	SiPostman,
+	SiVercel,
 } from 'react-icons/si';
 import { BsCaretRight } from 'react-icons/bs';
 import styles from '@/styles/Icon.module.scss';
@@ -63,6 +64,8 @@ const Icon = ({ name }) => {
 			return <SiExpress className={styles.icon} />;
 		case 'Postman':
 			return <SiPostman className={styles.icon} />;
+		case 'Vercel':
+			return <SiVercel className={styles.icon} />;
 		case 'Email':
 			return <FaAt className={styles.social_icon} />;
 		case 'External':

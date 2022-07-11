@@ -13,6 +13,11 @@
         &::before {
             width: 185px;
         }
+
+        span {
+            @include headingTextOverLine;
+            left: 185px;
+        }
     }
 
     .icon_wrapper {
@@ -44,6 +49,13 @@
 
         &::before {
             width: 130px;
+        }
+
+        span {
+            @include headingTextOverLine;
+            left: 130px;
+            top: -3px !important;
+            font-size: $font-xxs !important;
         }
     }
 

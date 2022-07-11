@@ -42,6 +42,7 @@ const Projects = () => {
 			<h1>
 				<Icon name='caretR' />
 				Projects
+				<span>Some of my latest projects and technologies used in each of them</span>
 			</h1>
 			<div className={styles.carousel}>
 				<div className={styles.carousel_viewport} ref={emblaRef}>

@@ -173,7 +173,7 @@
     font-size: 18px;
   }
   .project_content a:first-child {
-    margin-right: 35px;
+    margin-right: 45px;
   }
   .project_content .description_wrapper > p {
     font-size: 10px !important;
@@ -183,5 +183,10 @@
   }
   .project_content .stack > p {
     font-size: 8px !important;
+  }
+}
+@media (max-width: 480px) {
+  .project_content a:first-child {
+    margin-right: 35px;
   }
 }

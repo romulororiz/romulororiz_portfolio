@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Icon from '@/components/icons/icon';
 import styles from '@/styles/Contact.module.scss';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -51,6 +51,7 @@ const Contact = () => {
 			<h1>
 				<Icon name='caretR' />
 				Contact
+				<span>Get in touch! I'll get back to you as soon as possible!</span>
 			</h1>
 			<div className={styles.contactForm}>
 				{!messageSent ? (

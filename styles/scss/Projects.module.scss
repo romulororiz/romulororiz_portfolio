@@ -13,6 +13,11 @@
         &::before {
             width: 140px;
         }
+
+        span {
+            @include headingTextOverLine;
+            left: 140px;
+        }
     }
 }
 
@@ -101,6 +106,13 @@
 
         &::before {
             width: 100px;
+        }
+
+        span {
+            @include headingTextOverLine;
+            left: 100px;
+            top: -3px !important;
+            font-size: $font-xxs !important;
         }
     }
 
