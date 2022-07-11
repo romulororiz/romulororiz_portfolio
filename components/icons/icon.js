@@ -12,6 +12,7 @@ import {
 	FaAt,
 } from 'react-icons/fa';
 import { TbBrandNextjs } from 'react-icons/tb';
+import { FiExternalLink } from 'react-icons/fi';
 import { IoLogoJavascript } from 'react-icons/io';
 import {
 	SiStyledcomponents,
@@ -64,6 +65,8 @@ const Icon = ({ name }) => {
 			return <SiPostman className={styles.icon} />;
 		case 'Email':
 			return <FaAt className={styles.social_icon} />;
+		case 'External':
+			return <FiExternalLink className={styles.social_icon} />;
 		case 'caretR':
 			return <BsCaretRight className={styles.caretR} />;
 		default:

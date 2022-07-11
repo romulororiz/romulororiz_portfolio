@@ -30,13 +30,17 @@
     position: relative;
     padding: 6px;
     background-color: $dark-slate;
-    border-radius: 10px;
+    border-radius: $border-radius;
     color: $dark-navy;
     position: relative;
 
     &:hover {
         transform: translateY(-3px);
         background-color: $malachite-green;
+    }
+
+    @media ($mobileL) {
+        font-size: 28px;
     }
 }
     

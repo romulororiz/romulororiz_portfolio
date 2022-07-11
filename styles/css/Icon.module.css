@@ -37,7 +37,7 @@
   position: relative;
   padding: 6px;
   background-color: #495670;
-  border-radius: 10px;
+  border-radius: 4px;
   color: #091729;
   position: relative;
 }
@@ -45,6 +45,11 @@
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
   background-color: #02c733;
+}
+@media (max-width: 480px) {
+  .social_icon {
+    font-size: 28px;
+  }
 }
 
 .caretR {

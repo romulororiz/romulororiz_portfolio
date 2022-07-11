@@ -32,9 +32,20 @@
     @include flexCenter;
     flex-direction: column;
     width: 35%;
+    height: 100%;
     left: -50px;
     position: relative;
     text-align: right;
+
+    a {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    a:first-child {
+        margin-right: 50px;
+    }
 
     h2 {
         width: 100%;
@@ -96,6 +107,7 @@
         h2 {
             text-align: left;
             font-size: 22px;
+            font-weight: 500;
         }
 
         .description_wrapper {
@@ -126,6 +138,10 @@
     .project_content {
         h2 {
             font-size: $font-lg;
+        }
+
+        a:first-child {
+            margin-right: 35px;
         }
         
         .description_wrapper > p {

@@ -152,6 +152,7 @@ module.exports = {
 			description:
 				'A financial blog specialized in Investing, Personal Finances and Entrepreneurship. You can scroll over the recent posts, check the categories dropdown or easily search for a specific keyword in the search bar',
 			url: 'https://avidamaisrica.com',
+			repository: '',
 			image:
 				'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80',
 			stack: ['NextJs', 'Vanilla Css', 'Strapi CMS', 'Heroku', 'Vercel'],
@@ -162,6 +163,7 @@ module.exports = {
 			description:
 				'A minimalistic portfolio website that gave so much joy in building it. It really translates to the screen what I think and love to do in Frontend Development.',
 			url: 'https://romulororiz.com',
+			repository: '',
 			image: '/assets/project2.jpg',
 			stack: ['NextJs', 'Sass', 'Vercel'],
 		},
@@ -171,6 +173,7 @@ module.exports = {
 			description:
 				'A Rick and Morty Hub for you to easily get the information you seek on your favorite characters of the best show ever made',
 			url: '',
+			repository: '',
 			image: '/assets/project3.jpg',
 			stack: ['NextJs', 'Vanilla Css', 'Rick and Morty API', 'Vercel'],
 		},
@@ -180,6 +183,7 @@ module.exports = {
 			description:
 				'A financial blog specialized in Investing, Personal Finances and Entrepreneurship. You can scroll over the recent posts, check the categories dropdown or easily search for a specific keyword in the search bar',
 			url: 'https://avidamaisrica.com',
+			repository: '',
 			image:
 				'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80',
 			stack: ['NextJs', 'Vanilla Css', 'Strapi CMS', 'Heroku', 'Vercel'],
@@ -190,6 +194,7 @@ module.exports = {
 			description:
 				'A Rick and Morty Hub for you to easily get the information you seek on your favorite characters of the best show ever made',
 			url: '',
+			repository: '',
 			image: '/assets/project3.jpg',
 			stack: ['NextJs', 'Vanilla Css', 'Rick and Morty API', 'Vercel'],
 		},

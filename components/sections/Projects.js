@@ -46,18 +46,21 @@ const Projects = () => {
 			<div className={styles.carousel}>
 				<div className={styles.carousel_viewport} ref={emblaRef}>
 					<div className={styles.carousel_container}>
-						{projects.map(({ id, name, description, url, image, stack }, i) => (
-							<div key={i} className={styles.carousel_slide}>
-								<Project
-									id={id}
-									name={name}
-									description={description}
-									url={url}
-									image={image}
-									stack={stack}
-								/>
-							</div>
-						))}
+						{projects.map(
+							({ id, name, description, url, repository, image, stack }, i) => (
+								<div key={i} className={styles.carousel_slide}>
+									<Project
+										id={id}
+										name={name}
+										description={description}
+										url={url}
+										repository={repository}
+										image={image}
+										stack={stack}
+									/>
+								</div>
+							)
+						)}
 					</div>
 				</div>
 				{/* Btns */}

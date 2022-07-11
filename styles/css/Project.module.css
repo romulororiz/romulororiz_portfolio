@@ -58,9 +58,18 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 35%;
+  height: 100%;
   left: -50px;
   position: relative;
   text-align: right;
+}
+.project_content a {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.project_content a:first-child {
+  margin-right: 50px;
 }
 .project_content h2 {
   width: 100%;
@@ -135,6 +144,7 @@
   .project_content h2 {
     text-align: left;
     font-size: 22px;
+    font-weight: 500;
   }
   .project_content .description_wrapper {
     width: 100%;
@@ -161,6 +171,9 @@
 @media (max-width: 600px) {
   .project_content h2 {
     font-size: 18px;
+  }
+  .project_content a:first-child {
+    margin-right: 35px;
   }
   .project_content .description_wrapper > p {
     font-size: 10px !important;
