@@ -95,13 +95,13 @@ module.exports = {
 
 	about: [
 		{
-			text: "Hey there, my name is Rômulo. I'm a Brazilian/Italian in his late 20's living in Zurich, Switzerland. I haven't always been a developer and even tough my passion for Web Development goes back a long way, I've only had the opportunity to take it more seriously on a personal level about three years ago.",
+			text: "Hey there, my name is Rômulo. I'm a Brazilian/Italian in his late 20's living in Zurich, Switzerland. I haven't always been a developer and even though my passion for Web Development goes back a long way, I've only had the opportunity to take it more seriously on a personal level about three years ago.",
 		},
 		{
 			text: "I'm originally from Rio de Janeiro, Brazil. There I studied law and when I was about to graduate, about 6 years go, the opportunity to come to Europe presented itself to me in the form of an Italian Passport due to my Great-Grandfather's roots. Thanks a lot Grandpa!",
 		},
 		{
-			text: "Before settling in in Switzerland, I lived in Ireland and then Italy, respectively. These two places have taught me a lot and helped me finding in me a strength I didn't even know was there. I have nothing but gratitude for the experiences I had during this period. Leaving Brazil was one of the hardest yet most amazing things I could ever have done.",
+			text: 'Before settling in in Switzerland, I lived in Ireland and then Italy, respectively. These two places have taught me a lot and I have nothing but gratitude for the experiences I had during this period. Leaving Brazil was one of the hardest yet most amazing things I could have done.',
 		},
 		{
 			text: 'I arrived in Zurich in 2019 and that was when I really started to dive into Web Development. In 2020 I attended an intensive Full-Stack course in Zurich, which helped me to broaden my horizons and gave me the ground knowledge to step into the Web Development world and to decide which direction to follow.',
@@ -113,7 +113,7 @@ module.exports = {
 			text: "People don't usually take me for a nerd, but I am. And I'm proud of it! In my free time I love playing some good ol' RPG. As a kid, that's how I fell in love with the english language in the first place.",
 		},
 		{
-			text: "Balance is everything. I have been learning that day by day. It's so easy to get caught up in a project and literally forget about time. So I've found out that what works for me is to take a break to either go for a walk, take a dive in the lake, go to the cinema (which I personally love to do) or play some video-games to come back with a fresher head.",
+			text: "Balance is everything. I have been learning that day by day. It's so easy to get caught up in a project and literally forget about time. So I've found out that what works for me is to take a break to either go for a walk, take a dive in the lake, go to the cinema or play some video-games to come back with a fresher head.",
 		},
 	],
 
