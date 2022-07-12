@@ -20,7 +20,7 @@ const Project = ({ name, description, url, repository, image, stack }) => {
 		return () => window.removeEventListener('resize', handleResize);
 	}, []);
 
-	const isMobile = windowDimension <= 800;
+	const isMobile = windowDimension <= 860;
 
 	return (
 		<div className={styles.project_wrapper}>

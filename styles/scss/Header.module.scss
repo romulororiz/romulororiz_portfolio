@@ -3,7 +3,7 @@
 // Nav Desktop
 .header {
   @include headerNav;
-  @media ($desktopM) {
+  @media ($desktopXS) {
     .nav_desktop {
       display: none !important;
     }
@@ -60,8 +60,8 @@
     margin-top: 8px;
   }
 
-  @media ($desktopM) {
-    display: flex;
+  @media ($desktopXS) {
+    display: flex !important;
   }
 }
 
