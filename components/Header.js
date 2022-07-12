@@ -105,22 +105,22 @@ const Header = () => {
 		},
 	};
 
-	const aVariant = {
-		opened: {
-			opacity: 1,
-			x: '-50%',
-			transition: {
-				duration: 0.85,
-			},
-		},
-		closed: {
-			opacity: 0,
-			x: '120%',
-			transition: {
-				duration: 0,
-			},
-		},
-	};
+	// const aVariant = {
+	// 	opened: {
+	// 		opacity: 1,
+	// 		x: '-50%',
+	// 		transition: {
+	// 			duration: 0.85,
+	// 		},
+	// 	},
+	// 	closed: {
+	// 		opacity: 0,
+	// 		x: '120%',
+	// 		transition: {
+	// 			duration: 0,
+	// 		},
+	// 	},
+	// };
 
 	return (
 		<div
@@ -187,14 +187,15 @@ const Header = () => {
 							</motion.li>
 						))}
 				</motion.ol>
-				<motion.a
+				{/* Keep it out for the moment */}
+				{/* <motion.a
 					variants={aVariant}
 					className={styles.btn}
 					href='#'
 					rel='noopener noreferrer'
 				>
 					Resume
-				</motion.a>
+				</motion.a> */}
 			</motion.div>
 		</div>
 	);
