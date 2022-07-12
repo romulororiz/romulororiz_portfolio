@@ -15,6 +15,8 @@ const About = () => {
 	const [slideThree, setSlideThree] = useState(false);
 	const [slideFour, setSlideFour] = useState(false);
 	const [slideFive, setSlideFive] = useState(false);
+	const [slideSix, setSlideSix] = useState(false);
+	const [slideSeven, setSlideSeven] = useState(false);
 	const [selectedIndex, setSelectedIndex] = useState(0);
 	const [scrollSnaps, setScrollSnaps] = useState([]);
 	const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
@@ -55,6 +57,14 @@ const About = () => {
 				case 4:
 					setSlideFour(false);
 					setSlideFive(true);
+					break;
+				case 5:
+					setSlideFive(false);
+					setSlideSix(true);
+					break;
+				case 6:
+					setSlideSix(false);
+					setSlideSeven(true);
 					break;
 				default:
 					break;
@@ -104,6 +114,10 @@ const About = () => {
 						? about[3].text
 						: slideFive
 						? about[4].text
+						: slideSix
+						? about[5].text
+						: slideSeven
+						? about[6].text
 						: ''}
 				</p>
 				<div className={styles.carousel}>
