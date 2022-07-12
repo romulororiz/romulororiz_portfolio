@@ -7,8 +7,6 @@ import { useEffect, useState } from 'react';
 const Project = ({ name, description, url, repository, image, stack }) => {
 	const [windowDimension, setWindowDimension] = useState(0);
 
-	console.log(repository);
-
 	useEffect(() => {
 		setWindowDimension(window.innerWidth);
 	}, []);
