@@ -59,12 +59,16 @@ const Project = ({ name, description, url, repository, image, stack }) => {
 				</motion.div>
 			) : (
 				<div className={styles.project_content}>
-					<a href={url} target='_blank' rel='noopener noreferrer'>
-						<Icon name='External' />
-					</a>
-					<a href={repository} target='_blank' rel='noopener noreferrer'>
-						<Icon name='Github' />
-					</a>
+					{url === '' ? null : (
+						<a href={url} target='_blank' rel='noopener noreferrer'>
+							<Icon name='External' />
+						</a>
+					)}
+					{repository === '' ? null : (
+						<a href={repository} target='_blank' rel='noopener noreferrer'>
+							<Icon name='Github' />
+						</a>
+					)}
 					<h2>{name}</h2>
 					<div className={styles.description_wrapper}>
 						<p>{description}</p>
