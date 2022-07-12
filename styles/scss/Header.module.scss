@@ -26,7 +26,7 @@
 
 // Menu Icon
 .menu_button_container {
-  display: flex;
+  display: none;
   width: 30px;
   height: 100%;
   cursor: pointer;
@@ -58,6 +58,10 @@
   .menu_button::after {
     content: '';
     margin-top: 8px;
+  }
+
+  @media ($desktopXS) {
+    display: flex !important;
   }
 }
 

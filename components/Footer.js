@@ -25,8 +25,8 @@ const Footer = () => {
 
 	return (
 		<motion.div
-			initial={{ opacity: 0 }}
-			whileInView={{ opacity: 1 }}
+			initial={{ y: 80, opacity: 0 }}
+			whileInView={{ y: 0, opacity: 1 }}
 			viewport={{ once: 'true', amount: 'some' }}
 			transition={{ duration: 0.8 }}
 			className={styles.footer}

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { navLinks } from '@/config/index';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from '@/styles/Header.module.scss';
 import useScrollDirection from 'hooks/useScrollDirection';
 import { motion } from 'framer-motion';
@@ -60,6 +60,7 @@ const Header = () => {
 	const isMobile = windowDimension <= 860;
 
 	// Motion
+	// Desktop Nav
 	const variants = {
 		initial: { opacity: 0, y: '-100%' },
 		animate: i => ({
@@ -70,6 +71,55 @@ const Header = () => {
 				delay: i * 0.2,
 			},
 		}),
+	};
+
+	// Mobile Nav
+	const olVariant = {
+		opened: {
+			transition: {
+				delayChildren: 0.1,
+				staggerChildren: 0.15,
+			},
+		},
+		closed: {
+			transition: {
+				staggerChildren: 0.06,
+				staggerDirection: -1,
+			},
+		},
+	};
+	const liVariant = {
+		opened: {
+			opacity: 1,
+			x: '0%',
+			transition: {
+				duration: 0.45,
+			},
+		},
+		closed: {
+			opacity: 0,
+			x: '130%',
+			transition: {
+				duration: 0,
+			},
+		},
+	};
+
+	const aVariant = {
+		opened: {
+			opacity: 1,
+			x: '-50%',
+			transition: {
+				duration: 0.85,
+			},
+		},
+		closed: {
+			opacity: 0,
+			x: '120%',
+			transition: {
+				duration: 0,
+			},
+		},
 	};
 
 	return (
@@ -107,39 +157,45 @@ const Header = () => {
 			</div>
 
 			{/* Hamburger Menu */}
-			{isMobile && (
-				<>
-					<input id={styles.menu_toggle} type='checkbox' />
-					<label
-						onClick={handleShowMenu}
-						className={styles.menu_button_container}
-						htmlFor={styles.menu_toggle}
-					>
-						<div className={styles.menu_button}></div>
-					</label>
-				</>
-			)}
+			<input id={styles.menu_toggle} type='checkbox' />
+			<label
+				onClick={handleShowMenu}
+				className={styles.menu_button_container}
+				htmlFor={styles.menu_toggle}
+			>
+				<div className={styles.menu_button}></div>
+			</label>
 
 			{/* Nav Mobile */}
-			<div className={`${styles.nav_mobile} ${showMenu && styles.active}`}>
-				<ol>
+			<motion.div
+				initial='closed'
+				animate={showMenu ? 'opened' : 'closed'}
+				className={`${styles.nav_mobile} ${showMenu && styles.active}`}
+			>
+				<motion.ol variants={olVariant}>
 					{navLinks &&
 						navLinks.map(({ url, name }, i) => (
-							<li
+							<motion.li
 								key={i}
+								variants={liVariant}
 								onClick={() => {
 									setShowMenu(false);
 									handleCheckedStatus();
 								}}
 							>
 								<Link href={url}>{name}</Link>
-							</li>
+							</motion.li>
 						))}
-				</ol>
-				<a className={styles.btn} href='#' rel='noopener noreferrer'>
+				</motion.ol>
+				<motion.a
+					variants={aVariant}
+					className={styles.btn}
+					href='#'
+					rel='noopener noreferrer'
+				>
 					Resume
-				</a>
-			</div>
+				</motion.a>
+			</motion.div>
 		</div>
 	);
 };

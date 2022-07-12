@@ -65,7 +65,7 @@ const Contact = () => {
 					viewport={{ once: 'true', amount: 'some' }}
 					transition={{ duration: 1.2 }}
 				>
-					Get in touch! I'll get back to you as soon as possible!
+					Get in touch! I'll get back to you as soon as possible
 				</motion.span>
 			</h1>
 			<div className={styles.contactForm}>
