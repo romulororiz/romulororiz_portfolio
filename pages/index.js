@@ -16,8 +16,8 @@ const Home = () => {
 				<Skills />
 				<Projects />
 				<Contact />
+				<ScrollTop />
 			</main>
-			<ScrollTop />
 		</Layout>
 	);
 };

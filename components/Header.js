@@ -3,6 +3,7 @@ import { navLinks } from '@/config/index';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import styles from '@/styles/Header.module.scss';
 import useScrollDirection from 'hooks/useScrollDirection';
+import { motion } from 'framer-motion';
 import 'animate.css';
 
 const logo = (
@@ -15,8 +16,6 @@ const Header = () => {
 	const [scrollTop, setScrollTop] = useState(true);
 	const [showMenu, setShowMenu] = useState(false);
 	const scrollDirection = useScrollDirection('down');
-	if (typeof window !== undefined) {
-	}
 
 	const handleShowMenu = () => {
 		setShowMenu(!showMenu);
@@ -57,6 +56,18 @@ const Header = () => {
 		};
 	}, [handleResize, showMenu]);
 
+	const variants = {
+		initial: { opacity: 0, y: '-100%' },
+		animate: i => ({
+			y: 0,
+			opacity: 1,
+			transition: {
+				duration: 0.5,
+				delay: i * 0.2,
+			},
+		}),
+	};
+
 	return (
 		<div
 			className={`${
@@ -78,13 +89,15 @@ const Header = () => {
 				<ol>
 					{navLinks &&
 						navLinks.map(({ url, name }, i) => (
-							<li
+							<motion.li
 								key={i}
-								className='animate__animated animate__zoomIn'
-								style={{ animationDelay: `${i * 300}ms` }}
+								custom={i}
+								variants={variants}
+								initial='initial'
+								animate='animate'
 							>
 								<Link href={url}>{name}</Link>
-							</li>
+							</motion.li>
 						))}
 				</ol>
 			</div>

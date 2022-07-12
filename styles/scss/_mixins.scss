@@ -37,9 +37,11 @@
     color: $malachite-green;
     font-size: $fontSize;
     font-weight: $fontWeight;
+    -webkit-appearance: none;
 
     &:hover {
         background-color: lighten($backgroundColor, 5%);
+        -webkit-appearance: none;
     }
 }
 

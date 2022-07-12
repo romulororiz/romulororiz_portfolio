@@ -130,7 +130,7 @@ const Contact = () => {
 							/>
 							<label htmlFor='message'>Message</label>
 						</div>
-						<input type='submit' value='Enviar' />
+						<input type='submit' value='Send' />
 					</form>
 				) : (
 					<div className={styles.messageSent}>

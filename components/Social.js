@@ -8,14 +8,14 @@ const Social = () => {
 	useEffect(() => {
 		setTimeout(() => {
 			document.getElementById('line').classList.add(styles.line);
-		}, 2200);
+		}, 1300);
 	}, []);
 
 	return (
 		<motion.div
 			initial={{ x: -100, opacity: 0 }}
 			animate={{ x: 0, opacity: 1 }}
-			transition={{ duration: 1, delay: 1.5 }}
+			transition={{ duration: 1, delay: 0.5 }}
 			className={`${styles.social}`}
 			id='social'
 		>

@@ -19,7 +19,7 @@
     color: $dark-navy;
     border-radius: 6px;
     transition: $transition;
-    box-shadow: 2px 5px 20px 2px rgba(0,0,0,.85);
+    box-shadow: 2px 5px 20px 2px rgba(0,0,0,.55);
     animation: shake 5s infinite;
 
     &:hover {
@@ -29,7 +29,7 @@
 
 .scrollTop:hover .icon {
     background-color: $malachite-green;
-    box-shadow: 2px 5px 20px 8px rgba(0,0,0,.85);
+    box-shadow: 2px 5px 20px 8px rgba(0,0,0,.55);
 }
 
 .scrollTopHidden {

@@ -109,10 +109,12 @@
   color: #02c733;
   font-size: 16px;
   font-weight: 500;
+  -webkit-appearance: none;
   margin-left: 20px;
 }
 .header .btn:hover, .scrollDown .btn:hover, .scrollUp .btn:hover {
   background-color: rgba(13, 13, 13, 0);
+  -webkit-appearance: none;
 }
 .header .btn:hover, .scrollDown .btn:hover, .scrollUp .btn:hover {
   background-color: rgba(2, 199, 51, 0.25);
