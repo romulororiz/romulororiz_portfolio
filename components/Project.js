@@ -1,6 +1,7 @@
 import styles from '@/styles/Project.module.scss';
 import Image from '@/components/Image';
 import Icon from '@/components/icons/icon';
+import { motion } from 'framer-motion';
 
 const Project = ({ name, description, url, repository, image, stack }) => {
 	return (
@@ -8,7 +9,13 @@ const Project = ({ name, description, url, repository, image, stack }) => {
 			<div className={styles.project_image_wrapper}>
 				<Image src={image} width={650} height={500} alt={''} />
 			</div>
-			<div className={styles.project_content}>
+			<motion.div
+				initial={{ x: 100, opacity: 0 }}
+				whileInView={{ x: 0, opacity: 1 }}
+				viewport={{ once: 'true', amount: 'some' }}
+				transition={{ duration: 1.2 }}
+				className={styles.project_content}
+			>
 				<a href={url} target='_blank' rel='noopener noreferrer'>
 					<Icon name='External' />
 				</a>
@@ -24,7 +31,7 @@ const Project = ({ name, description, url, repository, image, stack }) => {
 						))}
 					</div>
 				</div>
-			</div>
+			</motion.div>
 		</div>
 	);
 };
