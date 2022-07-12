@@ -103,39 +103,43 @@ module.exports = {
 	icons: [
 		{
 			name: 'Git',
-			percentage: '75%',
+			percentage: '70%',
 		},
 		{
 			name: 'Html5',
-			percentage: '100%',
-		},
-		{
-			name: 'Css3',
-			percentage: '100%',
-		},
-		{
-			name: 'Sass',
-			percentage: '95%',
-		},
-		{
-			name: 'Javascript',
-			percentage: '80%',
-		},
-		{
-			name: 'React',
-			percentage: '95%',
-		},
-		{
-			name: 'NextJs',
 			percentage: '90%',
 		},
 		{
-			name: 'NodeJs',
+			name: 'Css3',
+			percentage: '85%',
+		},
+		{
+			name: 'Sass',
 			percentage: '80%',
 		},
 		{
 			name: 'Styled Components',
+			percentage: '65%',
+		},
+		{
+			name: 'Tailwind',
+			percentage: '80%',
+		},
+		{
+			name: 'Javascript',
 			percentage: '75%',
+		},
+		{
+			name: 'React',
+			percentage: '85%',
+		},
+		{
+			name: 'NextJs',
+			percentage: '85%',
+		},
+		{
+			name: 'NodeJs',
+			percentage: '70%',
 		},
 		{
 			name: 'Mongodb',
@@ -155,7 +159,7 @@ module.exports = {
 		},
 		{
 			name: 'Redux',
-			percentage: '70%',
+			percentage: '75%',
 		},
 		{
 			name: 'Express',
@@ -197,24 +201,14 @@ module.exports = {
 		},
 		{
 			id: 4,
-			name: 'A Vida + Rica',
+			name: 'Github Finder',
 			description:
-				'A financial blog specialized in Investing, Personal Finances and Entrepreneurship. You can scroll over the recent posts, check the categories dropdown or easily search for a specific keyword in the search bar',
-			url: 'https://avidamaisrica.com',
-			repository: '',
+				'A React Application for searching and displaying Github user`s profiles and it`s repositories',
+			url: 'https://github-finder-delta-two.vercel.app/',
+			repository: 'https://github.com/romulororiz/Github-Finder',
 			image:
 				'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80',
-			stack: ['NextJs', 'Vanilla Css', 'Strapi CMS', 'Heroku', 'Vercel'],
-		},
-		{
-			id: 5,
-			name: 'Rick and Morty Characteropedia',
-			description:
-				'A Rick and Morty Hub for you to easily get the information you seek on your favorite characters of the best show ever made',
-			url: '',
-			repository: '',
-			image: '/assets/project3.jpg',
-			stack: ['NextJs', 'Vanilla Css', 'Rick and Morty API', 'Vercel'],
+			stack: ['React', 'Context API', 'Tailwind CSS', 'Vercel'],
 		},
 	],
 };
