@@ -50,7 +50,7 @@ module.exports = {
 	// About Section
 	slides: [
 		{
-			src: '/assets/romulo.jpg',
+			src: '/assets/romuloProfile.jpg',
 			width: 550,
 			height: 500,
 			alt: 'profile picture',
