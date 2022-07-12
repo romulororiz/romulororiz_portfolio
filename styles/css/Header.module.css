@@ -142,7 +142,9 @@
 }
 
 .menu_button_container {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 30px;
   height: 100%;
   cursor: pointer;
@@ -179,13 +181,6 @@
 .menu_button_container .menu_button::after {
   content: "";
   margin-top: 8px;
-}
-@media (max-width: 860px) {
-  .menu_button_container {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-  }
 }
 
 #menu_toggle {

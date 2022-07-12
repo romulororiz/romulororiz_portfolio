@@ -51,7 +51,7 @@ const Projects = () => {
 				<Icon name='caretR' />
 				Projects
 				<motion.span
-					initial={{ x: 100, opacity: 0 }}
+					initial={{ x: 20, opacity: 0 }}
 					whileInView={{ x: 0, opacity: 1 }}
 					viewport={{ once: 'true', amount: 'some' }}
 					transition={{ duration: 1.2 }}

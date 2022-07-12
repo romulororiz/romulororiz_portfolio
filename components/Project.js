@@ -52,7 +52,13 @@ const Project = ({ name, description, url, repository, image, stack }) => {
 					</div>
 				</motion.div>
 			) : (
-				<div className={styles.project_content}>
+				<motion.div
+					initial={{ x: '-50%', y: '50%', opacity: 0 }}
+					whileInView={{ x: '-50%', y: '-50%', opacity: 1 }}
+					viewport={{ once: 'true', amount: 'some' }}
+					transition={{ duration: 1 }}
+					className={styles.project_content}
+				>
 					<a href={url} target='_blank' rel='noopener noreferrer'>
 						<Icon name='External' />
 					</a>
@@ -68,7 +74,7 @@ const Project = ({ name, description, url, repository, image, stack }) => {
 							))}
 						</div>
 					</div>
-				</div>
+				</motion.div>
 			)}
 		</div>
 	);

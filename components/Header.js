@@ -15,19 +15,12 @@ const logo = (
 const Header = () => {
 	const [scrollTop, setScrollTop] = useState(true);
 	const [showMenu, setShowMenu] = useState(false);
+	const [windowDimension, setWindowDimension] = useState(0);
 	const scrollDirection = useScrollDirection('down');
 
 	const handleShowMenu = () => {
 		setShowMenu(!showMenu);
 	};
-
-	const handleResize = useCallback(e => {
-		if (e.currentTarget.innerWidth > 1200) {
-			setShowMenu(false);
-			// Reset Hamburger menu status on resize
-			handleCheckedStatus();
-		}
-	}, []);
 
 	const handleScroll = () => {
 		setScrollTop(document.documentElement.scrollTop < 50);
@@ -39,12 +32,20 @@ const Header = () => {
 	};
 
 	useEffect(() => {
+		setWindowDimension(window.innerWidth);
+	}, []);
+
+	useEffect(() => {
 		// Prevent scroll on mobile menu open
 		const body = document.getElementById('body');
 		if (showMenu) {
 			body.style.overflowY = 'hidden';
 		} else {
 			body.style.overflowY = 'auto';
+		}
+
+		function handleResize() {
+			setWindowDimension(window.innerWidth);
 		}
 
 		window.addEventListener('scroll', handleScroll);
@@ -54,8 +55,11 @@ const Header = () => {
 			window.removeEventListener('scroll', handleScroll);
 			window.addEventListener('resize', handleResize);
 		};
-	}, [handleResize, showMenu]);
+	}, [showMenu]);
 
+	const isMobile = windowDimension <= 860;
+
+	// Motion
 	const variants = {
 		initial: { opacity: 0, y: '-100%' },
 		animate: i => ({
@@ -103,14 +107,18 @@ const Header = () => {
 			</div>
 
 			{/* Hamburger Menu */}
-			<input id={styles.menu_toggle} type='checkbox' />
-			<label
-				onClick={handleShowMenu}
-				className={styles.menu_button_container}
-				htmlFor={styles.menu_toggle}
-			>
-				<div className={styles.menu_button}></div>
-			</label>
+			{isMobile && (
+				<>
+					<input id={styles.menu_toggle} type='checkbox' />
+					<label
+						onClick={handleShowMenu}
+						className={styles.menu_button_container}
+						htmlFor={styles.menu_toggle}
+					>
+						<div className={styles.menu_button}></div>
+					</label>
+				</>
+			)}
 
 			{/* Nav Mobile */}
 			<div className={`${styles.nav_mobile} ${showMenu && styles.active}`}>
