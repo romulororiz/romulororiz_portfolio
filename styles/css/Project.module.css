@@ -127,11 +127,9 @@
   .project_wrapper:hover .project_image_wrapper::after {
     opacity: 1;
   }
-
   .project_image_wrapper {
     width: 100%;
   }
-
   .project_content {
     width: 80%;
     position: absolute;
