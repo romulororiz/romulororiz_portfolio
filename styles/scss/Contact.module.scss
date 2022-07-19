@@ -55,7 +55,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    opacity: .5;
+    opacity: .75;
     transition: all .2s ease;
     pointer-events: none;
     font-size: $font-md;
@@ -122,12 +122,20 @@
     color: $malachite-green;
 }
 
-.contactForm input[type='email']:invalid + label {
-    color: $malachite-green;
+.contactForm input[type='text']:valid,
+.contactForm input[type='email']:valid,
+.contactForm input[type='email']:invalid,
+.contactForm input[type='number']:valid,
+.contactForm textarea:valid {
+	border-bottom: 1px solid rgba($malachite-green, 1);
+}
+
+.contactForm input[type='email'][value='']{
+	border-bottom: 1px solid rgba($malachite-green, .25);
 }
 
 .contactForm input[type='email'][value=''] + label {
-    opacity: .5;
+    opacity: .55;
     transform: none !important;
     font-weight: 400 !important;
     color: $light-slate;
@@ -150,7 +158,6 @@
 .contactForm input[type='submit']:hover {
    background-color: rgba($malachite-green, 0.25);
 }
-
 
 .messageSent {
     display: flex;

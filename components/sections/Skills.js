@@ -33,7 +33,7 @@ const Skills = () => {
 						<Tooltip name={name}>
 							<span>
 								<Icon name={name} />
-								<ProgressBar percentage={percentage} />{' '}
+								{/* <ProgressBar percentage={percentage} />{' '} */}
 							</span>
 						</Tooltip>
 					</div>
