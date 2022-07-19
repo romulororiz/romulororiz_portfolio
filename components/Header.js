@@ -1,10 +1,12 @@
 import Link from 'next/link';
-import { navLinks } from '@/config/index';
+import { navLinks, socialMedia } from '@/config/index';
 import { useEffect, useState } from 'react';
 import styles from '@/styles/Header.module.scss';
 import useScrollDirection from 'hooks/useScrollDirection';
 import { motion } from 'framer-motion';
 import 'animate.css';
+import Social from './Social';
+import Icon from './icons/icon';
 
 const logo = (
 	<>
@@ -105,22 +107,23 @@ const Header = () => {
 		},
 	};
 
-	// const aVariant = {
-	// 	opened: {
-	// 		opacity: 1,
-	// 		x: '-50%',
-	// 		transition: {
-	// 			duration: 0.85,
-	// 		},
-	// 	},
-	// 	closed: {
-	// 		opacity: 0,
-	// 		x: '120%',
-	// 		transition: {
-	// 			duration: 0,
-	// 		},
-	// 	},
-	// };
+	const socialVariant = {
+		opened: {
+			opacity: 1,
+			x: '0%',
+			transition: {
+				duration: 0.45,
+				delay: 1,
+			},
+		},
+		closed: {
+			opacity: 0,
+			x: '130%',
+			transition: {
+				duration: 0,
+			},
+		},
+	};
 
 	return (
 		<div
@@ -186,6 +189,13 @@ const Header = () => {
 								<Link href={url}>{name}</Link>
 							</motion.li>
 						))}
+					<motion.div variants={socialVariant} className={styles.social}>
+						{socialMedia.map(({ name, url }, i) => (
+							<a href={url} key={i}>
+								<Icon name={name} className={styles.icon} />
+							</a>
+						))}
+					</motion.div>
 				</motion.ol>
 				{/* Keep it out for the moment */}
 				{/* <motion.a
