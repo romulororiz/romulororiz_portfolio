@@ -20,7 +20,8 @@
     border-radius: 6px;
     transition: $transition;
     box-shadow: 2px 5px 20px 2px rgba(0,0,0,.55);
-    animation: shake 5s infinite;
+    animation: bounce 5s ease;
+    animation-iteration-count: 2;
 
     &:hover {
         animation-play-state: paused;
@@ -49,7 +50,7 @@
     }
 }
 
-@keyframes shake {
+@keyframes bounce {
     10%,
     20%,
     30%,
