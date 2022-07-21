@@ -10,13 +10,8 @@ import Icon from '@/components/icons/icon';
 import { motion } from 'framer-motion';
 
 const About = () => {
-	const [slideOne, setSlideOne] = useState(true);
-	const [slideTwo, setSlideTwo] = useState(false);
-	const [slideThree, setSlideThree] = useState(false);
-	const [slideFour, setSlideFour] = useState(false);
-	const [slideFive, setSlideFive] = useState(false);
-	const [slideSix, setSlideSix] = useState(false);
-	const [slideSeven, setSlideSeven] = useState(false);
+	const [slideIndex, setSlideIndex] = useState(0);
+	const [slideText, setSlideText] = useState('');
 	const [selectedIndex, setSelectedIndex] = useState(0);
 	const [scrollSnaps, setScrollSnaps] = useState([]);
 	const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
@@ -32,44 +27,23 @@ const About = () => {
 		[emblaApi]
 	);
 
+	// Check slide index and about me text index
+	// and assign text with its respective slide
+	useEffect(() => {
+		const matchingSlideIndex = about.filter((_, index) => index === slideIndex);
+
+		if (emblaApi) {
+			emblaApi.on('select', () => {
+				setSlideIndex(emblaApi.slidesInView(true)[0]);
+			});
+		}
+
+		setSlideText(matchingSlideIndex[0].text);
+	}, [emblaApi, slideIndex]);
+
+	// Get scroll snaps for handling navigation with carousel dots
 	useEffect(() => {
 		if (!emblaApi) return;
-
-		emblaApi.on('select', () => {
-			const slideInView = emblaApi.slidesInView(true)[0];
-			switch (slideInView) {
-				case 0:
-					setSlideOne(true);
-					setSlideTwo(false);
-					break;
-				case 1:
-					setSlideOne(false);
-					setSlideTwo(true);
-					break;
-				case 2:
-					setSlideTwo(false);
-					setSlideThree(true);
-					break;
-				case 3:
-					setSlideThree(false);
-					setSlideFour(true);
-					break;
-				case 4:
-					setSlideFour(false);
-					setSlideFive(true);
-					break;
-				case 5:
-					setSlideFive(false);
-					setSlideSix(true);
-					break;
-				case 6:
-					setSlideSix(false);
-					setSlideSeven(true);
-					break;
-				default:
-					break;
-			}
-		});
 
 		setScrollSnaps(emblaApi.scrollSnapList());
 		emblaApi.on('select', onSelect);
@@ -103,23 +77,7 @@ const About = () => {
 				</motion.span>
 			</h1>
 			<div className={styles.about_grid}>
-				<p className={styles.about_text}>
-					{slideOne
-						? about[0].text
-						: slideTwo
-						? about[1].text
-						: slideThree
-						? about[2].text
-						: slideFour
-						? about[3].text
-						: slideFive
-						? about[4].text
-						: slideSix
-						? about[5].text
-						: slideSeven
-						? about[6].text
-						: ''}
-				</p>
+				<p className={styles.about_text}>{slideText}</p>
 				<div className={styles.carousel}>
 					<div className={styles.carousel_viewport} ref={emblaRef}>
 						<div className={styles.carousel_container}>
