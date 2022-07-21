@@ -77,19 +77,19 @@ module.exports = {
 			src: '/assets/post.jpg',
 			width: 550,
 			height: 500,
-			alt: '',
+			alt: 'Die Post',
 		},
 		{
 			src: '/assets/tibia.jpg',
 			width: 550,
 			height: 500,
-			alt: '',
+			alt: 'Tibia RPG',
 		},
 		{
 			src: '/assets/kart.jpeg',
 			width: 550,
 			height: 500,
-			alt: '',
+			alt: 'Kart',
 		},
 	],
 
