@@ -4,9 +4,8 @@ import { useEffect, useState } from 'react';
 import styles from '@/styles/Header.module.scss';
 import useScrollDirection from 'hooks/useScrollDirection';
 import { motion } from 'framer-motion';
-import 'animate.css';
-import Social from './Social';
-import Icon from './icons/icon';
+import Icon from '@/components/icons/icon';
+import useWindowSize from 'hooks/useWindowSize';
 
 const logo = (
 	<>
@@ -19,23 +18,32 @@ const Header = () => {
 	const [showMenu, setShowMenu] = useState(false);
 	const [windowDimension, setWindowDimension] = useState(0);
 	const scrollDirection = useScrollDirection('down');
+	const windowSize = useWindowSize();
 
 	const handleShowMenu = () => {
 		setShowMenu(!showMenu);
 	};
 
+	// Handle scroll for header move on scrolling
 	const handleScroll = () => {
 		setScrollTop(document.documentElement.scrollTop < 50);
 	};
 
+	// Handle menu icon going back to default status
 	const handleCheckedStatus = () => {
 		const toggle = document.getElementById(styles.menu_toggle);
 		toggle.checked = false;
 	};
 
 	useEffect(() => {
-		setWindowDimension(window.innerWidth);
-	}, []);
+		setWindowDimension(windowSize.width);
+
+		// Close menu on resize
+		if (windowDimension >= 860) {
+			setShowMenu(false);
+			handleCheckedStatus();
+		}
+	}, [windowDimension, windowSize.width]);
 
 	useEffect(() => {
 		// Prevent scroll on mobile menu open
@@ -46,20 +54,12 @@ const Header = () => {
 			body.style.overflowY = 'auto';
 		}
 
-		function handleResize() {
-			setWindowDimension(window.innerWidth);
-		}
-
 		window.addEventListener('scroll', handleScroll);
-		window.addEventListener('resize', handleResize);
 
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
-			window.addEventListener('resize', handleResize);
 		};
 	}, [showMenu]);
-
-	const isMobile = windowDimension <= 860;
 
 	// Motion
 	// Desktop Nav

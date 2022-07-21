@@ -3,22 +3,15 @@ import Image from '@/components/Image';
 import Icon from '@/components/icons/icon';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import useWindowSize from 'hooks/useWindowSize';
 
 const Project = ({ name, description, url, repository, image, stack }) => {
 	const [windowDimension, setWindowDimension] = useState(0);
+	const windowSize = useWindowSize();
 
 	useEffect(() => {
-		setWindowDimension(window.innerWidth);
-	}, []);
-
-	useEffect(() => {
-		function handleResize() {
-			setWindowDimension(window.innerWidth);
-		}
-
-		window.addEventListener('resize', handleResize);
-		return () => window.removeEventListener('resize', handleResize);
-	}, []);
+		setWindowDimension(windowSize.width);
+	}, [windowSize.width]);
 
 	const isMobile = windowDimension <= 860;
 

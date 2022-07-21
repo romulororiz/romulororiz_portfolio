@@ -3,25 +3,18 @@ import { useCallback, useEffect, useState } from 'react';
 import { socialMedia } from '@/config/index';
 import Icon from '@/components/icons/icon';
 import { motion } from 'framer-motion';
+import useWindowSize from 'hooks/useWindowSize';
 
 const Footer = () => {
 	const [showSocial, setShowSocial] = useState(false);
-
-	const handleResize = useCallback(() => {
-		if (window.innerWidth <= 1170) {
-			setShowSocial(true);
-		} else {
-			setShowSocial(false);
-		}
-	}, []);
+	const [windowDimension, setWindowDimension] = useState(0);
+	const windowSize = useWindowSize();
 
 	useEffect(() => {
-		window.addEventListener('resize', handleResize);
+		setWindowDimension(windowSize.width);
 
-		return () => {
-			window.removeEventListener('resize', handleResize);
-		};
-	}, [handleResize]);
+		windowDimension <= 1170 ? setShowSocial(true) : setShowSocial(false);
+	}, [windowDimension, windowSize.width]);
 
 	return (
 		<motion.div

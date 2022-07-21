@@ -127,11 +127,12 @@
     }
     
     .social {
+      width: 100%;
       display: flex;
-      width: 75%;
-      justify-content: space-around;
-      position: absolute;
-      bottom: 20px;
+      justify-content: flex-end;
+      padding-right: 25px;
+      margin-top: 15px;
+      column-gap: 10px;
     }
   }
 
