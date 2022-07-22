@@ -15,7 +15,7 @@ module.exports = {
 		},
 		{
 			name: 'Twitter',
-			url: 'https://twitter.com/romulororiz',
+			url: 'https://twitter.com/roriz_romulo',
 		},
 		{
 			name: 'Email',
