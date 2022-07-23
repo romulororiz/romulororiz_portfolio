@@ -121,67 +121,51 @@ module.exports = {
 	icons: [
 		{
 			name: 'Git',
-			percentage: '70%',
 		},
 		{
 			name: 'Html5',
-			percentage: '90%',
 		},
 		{
 			name: 'Css3',
-			percentage: '85%',
 		},
 		{
 			name: 'Sass',
-			percentage: '80%',
 		},
 		{
 			name: 'Styled Components',
-			percentage: '65%',
 		},
 		{
 			name: 'Tailwind',
-			percentage: '80%',
 		},
 		{
 			name: 'Javascript',
-			percentage: '75%',
 		},
 		{
 			name: 'React',
-			percentage: '85%',
 		},
 		{
 			name: 'NextJs',
-			percentage: '85%',
 		},
 		{
 			name: 'NodeJs',
-			percentage: '70%',
 		},
 		{
 			name: 'Mongodb',
-			percentage: '75%',
 		},
 		{
 			name: 'Postman',
-			percentage: '90%',
 		},
 		{
 			name: 'Vercel',
-			percentage: '85%',
 		},
 		{
 			name: 'Heroku',
-			percentage: '65%',
 		},
 		{
 			name: 'Redux',
-			percentage: '75%',
 		},
 		{
 			name: 'Express',
-			percentage: '65%',
 		},
 	],
 
@@ -190,7 +174,7 @@ module.exports = {
 			id: 1,
 			name: 'A Vida + Rica',
 			description:
-				'A financial blog specialized in Investing, Personal Finances and Entrepreneurship. You can scroll over the recent posts, check the categories dropdown or easily search for a specific keyword in the search bar',
+				'A financial blog specialized in Investing, Personal Finances and Entrepreneurship.',
 			url: 'https://avidamaisrica.com',
 			repository: 'https://github.com/romulororiz/A-Vida-Mais-Rica-Frontend',
 			image: '/assets/projects/avidamaisrica.jpg',
@@ -218,6 +202,23 @@ module.exports = {
 		},
 		{
 			id: 4,
+			name: 'Support Desk',
+			description: 'A support ticket app built with the MERN stack.',
+			url: 'https://support-desk-mern.herokuapp.com/',
+			repository: 'https://github.com/romulororiz/support-desk-mern',
+			image: '/assets/projects/supportdesk.jpg',
+			stack: [
+				'MongoDB',
+				'Express',
+				'React',
+				'NodeJs',
+				'Redux Toolkit',
+				'Vanilla Css',
+				'Heroku',
+			],
+		},
+		{
+			id: 5,
 			name: 'Github Finder',
 			description:
 				'A React Application for searching and displaying Github user`s profiles and it`s repositories',

@@ -30,7 +30,7 @@ const About = () => {
 	// Check slide index and about me text index
 	// and assign text with its respective slide
 	useEffect(() => {
-		const matchingSlideIndex = about.filter((_, index) => index === slideIndex);
+		const matchingTextIndex = about.filter((_, index) => index === slideIndex);
 
 		if (emblaApi) {
 			emblaApi.on('select', () => {
@@ -38,7 +38,7 @@ const About = () => {
 			});
 		}
 
-		setSlideText(matchingSlideIndex[0].text);
+		setSlideText(matchingTextIndex[0].text);
 	}, [emblaApi, slideIndex]);
 
 	// Get scroll snaps for handling navigation with carousel dots
@@ -49,7 +49,7 @@ const About = () => {
 		emblaApi.on('select', onSelect);
 	}, [emblaApi, onSelect]);
 
-	// Handle Scroll
+	// Handle Prev and Next scrolls
 	const { scrollNext, scrollPrev } = setupPrevNextBtns(emblaApi);
 
 	// Handle disable next / prev buttons
