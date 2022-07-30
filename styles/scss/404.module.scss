@@ -8,14 +8,15 @@
 
     .icon_status {
         display: flex;
+        position: relative;
     }
 
     .icon {
         color: $malachite-green;
         font-size: 80px;
-        position: relative;
+        position: absolute;
         top: 15px;
-        right: 30px;
+        left: -100px;
     }
 
     > h1, span {
@@ -46,7 +47,7 @@
     .icon{
         font-size: 40px !important;
         top: 2px !important;
-        right: 15px !important;
+        left: -50px !important;
     }
     
     .not_found {
@@ -68,6 +69,7 @@
     .icon{
         font-size: 30px !important;
         top: -5px !important;
+        left: -40px !important;
     }
 
     .not_found {
