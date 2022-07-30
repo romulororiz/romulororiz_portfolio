@@ -50,7 +50,7 @@ module.exports = {
 	// About Section
 	slides: [
 		{
-			src: '/assets/romuloProfile.jpg',
+			src: '/assets/romuloProfile.webp',
 			width: 550,
 			height: 500,
 			alt: 'profile picture',
@@ -86,7 +86,7 @@ module.exports = {
 			alt: 'Tibia RPG',
 		},
 		{
-			src: '/assets/kart.jpeg',
+			src: '/assets/kart.webp',
 			width: 550,
 			height: 500,
 			alt: 'Kart',
