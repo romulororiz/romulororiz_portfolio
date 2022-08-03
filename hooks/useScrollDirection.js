@@ -41,7 +41,7 @@ const useScrollDirection = ({
 		 * If `off` is set to true reset the scroll direction.
 		 */
 		!off
-			? window.addEventListener('scroll', onScroll)
+			? window.addEventListener('scroll', onScroll, { passive: true })
 			: setScrollDir(initialDirection);
 
 		return () => window.removeEventListener('scroll', onScroll);

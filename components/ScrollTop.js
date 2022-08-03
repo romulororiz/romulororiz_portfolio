@@ -24,7 +24,7 @@ const ScrollTop = () => {
 
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
-			window.addEventListener('scroll', handleVisible);
+			window.addEventListener('scroll', handleVisible, { passive: true });
 		}
 
 		if (window.scrollY > 500) {
