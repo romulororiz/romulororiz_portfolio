@@ -191,7 +191,7 @@ const Header = () => {
 						))}
 					<motion.div variants={socialVariant} className={styles.social}>
 						{socialMedia.map(({ name, url }, i) => (
-							<a href={url} key={i}>
+							<a href={url} key={i} target='_blank' rel='noreferrer noopener'>
 								<Icon name={name} className={styles.icon} />
 							</a>
 						))}
