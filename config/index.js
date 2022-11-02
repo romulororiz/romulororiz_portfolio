@@ -219,10 +219,10 @@ module.exports = {
 		{
 			name: 'Rick and Morty Characteropedia',
 			description:
-				'A Rick and Morty Hub for you to easily get the information you seek on your favorite characters of the best show ever made - In progress.',
-			url: '',
-			repository: '',
-			image: '/assets/projects/rickandmorty.jpg',
+				'A Rick and Morty Hub for you to easily get the information you seek on your favorite characters of the best show ever made',
+			url: 'https://rickandmorty-characteropedia.herokuapp.com/',
+			repository: 'https://github.com/romulororiz/rickandmorty-characteropedia',
+			image: '/assets/projects/rickandmorty.png',
 			stack: [
 				'NextJs ',
 				'·',
