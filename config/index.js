@@ -224,13 +224,15 @@ module.exports = {
 			repository: 'https://github.com/romulororiz/rickandmorty-characteropedia',
 			image: '/assets/projects/rickandmorty.png',
 			stack: [
-				'NextJs ',
+				'React ',
 				'·',
 				'Vanilla Css ',
 				'·',
 				'Rick and Morty API ',
 				'·',
-				'Vercel',
+				'GraphQL',
+				'·',
+				'Heroku',
 			],
 		},
 		{
