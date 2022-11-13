@@ -28,7 +28,7 @@ const Skills = () => {
 				</motion.span>
 			</h1>
 			<div className={styles.icons_grid}>
-				{icons.map(({ name, percentage }, i) => (
+				{icons.map(({ name }, i) => (
 					<div className={styles.icon_wrapper} key={i}>
 						<Tooltip name={name}>
 							<span>

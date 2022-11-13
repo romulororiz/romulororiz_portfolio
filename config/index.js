@@ -165,6 +165,9 @@ module.exports = {
 			name: 'Redux',
 		},
 		{
+			name: 'GraphQL',
+		},
+		{
 			name: 'Express',
 		},
 	],
