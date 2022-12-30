@@ -220,6 +220,29 @@ module.exports = {
 			stack: ['NextJs', '·', 'Sass', '·', 'Vercel'],
 		},
 		{
+			name: 'WeatherIo',
+			description:
+				'A Simple looking weather application I have built to have a more in-depth understanding of GraphQL / Apollo Server / Apollo Client',
+			url: 'https://weatherioapp.herokuapp.com/',
+			repository: 'https://github.com/romulororiz/weatherio',
+			image: '/assets/projects/weatherIo.jpg',
+			stack: [
+				'React',
+				'·',
+				'Express',
+				'·',
+				'Apollo Server',
+				'·',
+				'GraphQL',
+				'·',
+				'Apollo Client',
+				'·',
+				'Sass',
+				'·',
+				'Heroku',
+			],
+		},
+		{
 			name: 'Rick and Morty Characteropedia',
 			description:
 				'A Rick and Morty Hub for you to easily get the information you seek on your favorite characters of the best show ever made',
