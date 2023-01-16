@@ -33,6 +33,7 @@ yarn-error.log*
 
 ### Sass ###
 .sass-cache/
+/styles/css/*.css
 /styles/css/*.css.map
 *.sass.map
 /styles/scss/*.scss.map

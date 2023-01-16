@@ -6,9 +6,23 @@ import Projects from '@/components/sections/Projects';
 import Skills from '@/components/sections/Skills';
 import styles from '@/styles/Home.module.scss';
 import ScrollTop from '@/components/ScrollTop';
+import { useEffect, useState } from 'react';
+import Spinner from '@/components/Spinner';
 
 const Home = () => {
-	return (
+	const [isLoading, setIsLoading] = useState(true);
+
+	useEffect(() => {
+		window.addEventListener('load', () =>
+			setTimeout(() => {
+				setIsLoading(false);
+			}, 1500)
+		);
+	}, []);
+
+	return isLoading ? (
+		<Spinner />
+	) : (
 		<Layout title='Romulo Roriz'>
 			<main className={styles.main}>
 				<Hero />

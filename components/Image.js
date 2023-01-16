@@ -6,7 +6,7 @@ const Image = ({ width, height, src, alt }) => {
 			layout='intrinsic'
 			width={width}
 			height={height}
-			objectFit='cover'
+			objectFit='fill'
 			src={src}
 			alt={alt || ''}
 			priority

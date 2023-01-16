@@ -23,6 +23,8 @@
 	"devDependencies": {
 		"eslint": "8.18.0",
 		"eslint-config-next": "12.1.6",
+		"gulp": "^4.0.2",
+		"gulp-sass": "^5.1.0",
 		"sass": "^1.53.0"
 	}
 }
