@@ -10,19 +10,7 @@ import { useEffect, useState } from 'react';
 import Spinner from '@/components/Spinner';
 
 const Home = () => {
-	const [isLoading, setIsLoading] = useState(true);
-
-	useEffect(() => {
-		window.addEventListener('load', () =>
-			setTimeout(() => {
-				setIsLoading(false);
-			}, 1500)
-		);
-	}, []);
-
-	return isLoading ? (
-		<Spinner />
-	) : (
+	return (
 		<Layout title='Romulo Roriz'>
 			<main className={styles.main}>
 				<Hero />
