@@ -7,7 +7,6 @@ import Skills from '@/components/sections/Skills';
 import styles from '@/styles/Home.module.scss';
 import ScrollTop from '@/components/ScrollTop';
 import { useEffect, useState } from 'react';
-import Spinner from '@/components/Spinner';
 
 const Home = () => {
 	return (
