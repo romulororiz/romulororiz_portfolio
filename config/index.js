@@ -220,6 +220,29 @@ module.exports = {
 			stack: ['NextJs', '·', 'Sass', '·', 'Vercel'],
 		},
 		{
+			name: 'Kunden Tracker',
+			description:
+				'A Simple looking CMS Platform for you to keep track of your customers',
+			url: 'https://kunden-tracker.herokuapp.com/',
+			repository: 'https://github.com/romulororiz/kunden-tracker',
+			image: '/assets/projects/kunden-tracker.jpg',
+			stack: [
+				'MongoDB ',
+				'·',
+				'Express ',
+				'·',
+				'React ',
+				'·',
+				'NodeJs ',
+				'·',
+				'Redux Toolkit ',
+				'·',
+				'Sass',
+				'·',
+				'Heroku',
+			],
+		},
+		{
 			name: 'WeatherIo',
 			description:
 				'A Simple looking weather application I have built to have a more in-depth understanding of GraphQL / Apollo Server / Apollo Client',
