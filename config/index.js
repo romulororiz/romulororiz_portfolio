@@ -74,12 +74,6 @@ module.exports = {
 			alt: 'coding',
 		},
 		{
-			src: '/assets/post.jpg',
-			width: 550,
-			height: 500,
-			alt: 'Die Post',
-		},
-		{
 			src: '/assets/tibia.jpg',
 			width: 550,
 			height: 500,
@@ -105,9 +99,6 @@ module.exports = {
 		},
 		{
 			text: 'I arrived in Zurich in 2019 and that was when I really started to dive into Web Development. In 2020 I attended an intensive Full-Stack course in Zurich, which helped me to broaden my horizons and gave me the ground knowledge to step into the Web Development world and to decide which direction to follow.',
-		},
-		{
-			text: "Since then, I've reached German B2.2 level and have worked at different places, having Die Post as my last and current employer. Parallel to my current job, I've been learning more about new technologies every day as well as designing and developing websites as a Freelancer in order to bring more ideas to life, little by little.",
 		},
 		{
 			text: "People don't usually take me for a nerd, but I am. And I'm proud of it! In my free time I love playing some good ol' RPG. As a kid, that's how I fell in love with the english language in the first place.",
