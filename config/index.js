@@ -297,22 +297,5 @@ module.exports = {
 				'Heroku',
 			],
 		},
-		{
-			name: 'Github Finder',
-			description:
-				'A React Application for searching and displaying Github user`s profiles and it`s repositories',
-			url: 'https://github-finder-delta-two.vercel.app/',
-			repository: 'https://github.com/romulororiz/Github-Finder',
-			image: '/assets/projects/githubfinder.jpg',
-			stack: [
-				'React ',
-				'·',
-				'Context API ',
-				'·',
-				'Tailwind CSS ',
-				'·',
-				'Vercel',
-			],
-		},
 	],
 };
