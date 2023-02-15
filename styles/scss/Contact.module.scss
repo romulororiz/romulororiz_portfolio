@@ -1,64 +1,64 @@
 @import 'variables', 'mixins';
 
 .contact {
-    @include flexCenter;
-    flex-direction: column;
-    min-height: 100vh;
-    margin-top: -40px;
+	@include flexCenter;
+	flex-direction: column;
+	min-height: 100vh;
+	margin-top: -40px;
 
-    h1 {
-        @include heading;
-        @include headingLine;
-        width: 100%;
+	h1 {
+		@include heading;
+		@include headingLine;
+		width: 100%;
 
-        &::before {
-            width: 135px;
-        }
+		&::before {
+			width: 135px;
+		}
 
-        span {
-            @include headingTextOverLine;
-            left: 138px;
-        }
-    }
+		span {
+			@include headingTextOverLine;
+			left: 138px;
+		}
+	}
 }
 
 /* Form */
 .contactForm {
-    margin-top: 35px;
-    width: 50%;
+	margin-top: 35px;
+	width: 50%;
 }
 
 .contactForm input:-webkit-autofill,
 .contactForm input:-webkit-autofill:focus {
-    transition: background-color 600000s 0s, color 600000s 0s;
+	transition: background-color 600000s 0s, color 600000s 0s;
 }
 .contactForm input[data-autocompleted] {
-    background-color: transparent !important;
+	background-color: transparent !important;
 }
 
 .formControl {
 	margin: 35px 0;
-    position: relative;
+	position: relative;
 }
 
 .name_section {
-    display: flex;
-    justify-content: space-between;
-    column-gap: 15px;
+	display: flex;
+	justify-content: space-between;
+	column-gap: 15px;
 
-    > .formControl {
-        margin-bottom: 0;
-    }
+	> .formControl {
+		margin-bottom: 0;
+	}
 }
 
 .formControl label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: .75;
-    transition: all .2s ease;
-    pointer-events: none;
-    font-size: $font-md;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.75;
+	transition: all 0.2s ease;
+	pointer-events: none;
+	font-size: $font-md;
 }
 
 .contactForm input[type='text'],
@@ -67,45 +67,44 @@
 	border: 0;
 	border-bottom: 1px solid rgba($malachite-green, 0.25);
 	width: 100%;
-    height: 35px;
+	height: 35px;
 	padding: 3px 12px;
 	font-size: 16px;
-    background-color: transparent;
-    transition: all .4s ease;
-    -webkit-appearance: none;
-    -webkit-border-radius: 0;
-    color: $lightest-slate;
+	background-color: transparent;
+	transition: all 0.4s ease;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	color: $lightest-slate;
 }
 
 .contactForm textarea {
-    border: 0;
+	border: 0;
 	border-bottom: 1px solid rgba($malachite-green, 0.25);
 	width: 100%;
 	padding: 15px 12px;
-    resize: none;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: 16px;
-    transition: all .4s ease;
-    -webkit-appearance: none;
-    -webkit-border-radius: 0;
-    color: $lightest-slate;
+	resize: none;
+	background-color: transparent;
+	font-family: inherit;
+	font-size: 16px;
+	transition: all 0.4s ease;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	color: $lightest-slate;
 }
 
 .contactForm input[type='text']:focus,
 .contactForm input[type='email']:focus,
 .contactForm input[type='number']:focus,
 .contactForm textarea:focus {
-    outline: none;
-    overflow: auto;
+	outline: none;
+	overflow: auto;
 	border-bottom: 1px solid rgba($malachite-green, 1);
 }
 
 .contactForm input[type='number']::-webkit-outer-spin-button,
-.contactForm input[type='number']::-webkit-inner-spin-button  {
-    -webkit-appearance: none;
+.contactForm input[type='number']::-webkit-inner-spin-button {
+	-webkit-appearance: none;
 }
-
 
 .contactForm input[type='text']:focus + label,
 .contactForm input[type='email']:focus + label,
@@ -116,10 +115,10 @@
 .contactForm input[type='email']:invalid + label,
 .contactForm input[type='number']:valid + label,
 .contactForm textarea:valid + label {
-    opacity: 1;
-    transform: scale(0.75) translateY(-120%) translateX(-30px);
-    font-weight: 500;
-    color: $malachite-green;
+	opacity: 1;
+	transform: scale(0.75) translateY(-120%) translateX(-30px);
+	font-weight: 500;
+	color: $malachite-green;
 }
 
 .contactForm input[type='text']:valid,
@@ -130,89 +129,95 @@
 	border-bottom: 1px solid rgba($malachite-green, 1);
 }
 
-.contactForm input[type='email'][value='']{
-	border-bottom: 1px solid rgba($malachite-green, .25);
+.contactForm input[type='email'][value=''] {
+	border-bottom: 1px solid rgba($malachite-green, 0.25);
 }
 
 .contactForm input[type='email'][value=''] + label {
-    opacity: .55;
-    transform: none !important;
-    font-weight: 400 !important;
-    color: $light-slate;
+	opacity: 0.55;
+	transform: none !important;
+	font-weight: 400 !important;
+	color: $light-slate;
 }
 
 .contactForm input[type='email'][value='']:focus + label {
-    opacity: 1 !important;
-    color: $malachite-green;
-    transform: scale(0.75) translateY(-120%) translateX(-30px) !important;
-    font-weight: 500 !important;
+	opacity: 1 !important;
+	color: $malachite-green;
+	transform: scale(0.75) translateY(-120%) translateX(-30px) !important;
+	font-weight: 500 !important;
 }
 
 .contactForm input[type='submit'] {
-    @include btnTheme(transparent, $malachite-green, $font-md, 700, $malachite-green);
-    display: block;
-    width: 40%;
-    margin: 0 auto;
+	@include btnTheme(
+		transparent,
+		$malachite-green,
+		$font-md,
+		700,
+		$malachite-green
+	);
+	display: block;
+	width: 40%;
+	margin: 0 auto;
 }
 
 .contactForm input[type='submit']:hover {
-   background-color: $malachite-green;
-    color: #fff;
+	background-color: $malachite-green;
+	color: #fff;
 }
 
 .messageSent {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 400px;
-    margin-bottom: 100px;
-    place-content: center;
-    place-items: center;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 400px;
+	margin-bottom: 100px;
+	place-content: center;
+	place-items: center;
 
-    p {
-        font-size: $font-xxl;
-    }
+	p {
+		font-size: $font-xxl;
+	}
 }
 
 @media ($desktopXS) {
-    .contactForm {
-        width: 65%;
-    }
+	.contactForm {
+		width: 65%;
+	}
 
-    .messageSent {
-        margin: 50px 0;
-    }
+	.messageSent {
+		margin: 50px 0;
+	}
 }
- 
+
 @media ($tabletL) {
-    .contactForm {
-        width: 100%
-    }
+	.contactForm {
+		width: 100%;
+	}
 }
 
 @media ($mobileL) {
-    .contact h1 {
-        font-size: $font-xxl;
+	.contact h1 {
+		font-size: $font-xxl;
 
-        &::before {
-            width: 95px;
-        }
+		&::before {
+			width: 95px;
+		}
 
-        span {
-            @include headingTextOverLine;
-            left: 95px;
-            top: -3px !important;
-            font-size: $font-xxs !important;
-        }
-    }
+		span {
+			@include headingTextOverLine;
+			left: 95px;
+			top: -3px !important;
+			font-size: $font-xxs !important;
+		}
+	}
 
-    .contactForm {
-        margin-top: 15px;
-    }
+	.contactForm {
+		margin-top: 15px;
+	}
 
-    .messageSent {
-        p {
-            font-size: $font-md;
-        }
-    }
+	.messageSent {
+		p {
+			font-size: $font-md;
+		}
+	}
 }

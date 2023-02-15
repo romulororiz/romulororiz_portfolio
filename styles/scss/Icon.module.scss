@@ -1,57 +1,58 @@
 @import 'variables';
 
 .icon {
-    font-size: 75px;
-    transition: $transition;
-    position: relative;
+	font-size: 75px;
+	transition: $transition;
+	position: relative;
 
-    &:hover {
-        color: $malachite-green;
-        transform: translateY(-3px);
-    }
+	&:hover {
+		color: $malachite-green;
+		transform: translateY(-3px);
+	}
 
-    @media (desktopXS) {
-        font-size: 60px;
-    }
+	@media (desktopXS) {
+		font-size: 60px;
+	}
 
-    @media ($tabletL) {
-        font-size: 50px;
-    }
+	@media ($tabletL) {
+		font-size: 50px;
+	}
 
-    @media ($mobileL) {
-        font-size: 40px;
-    }
+	@media ($mobileL) {
+		font-size: 40px;
+	}
 }
 
 .social_icon {
-    font-size: 36px;
-    cursor: pointer;
-    transition: $transition;
-    position: relative;
-    padding: 6px;
-    background-color: $dark-slate;
-    border-radius: 6px;
-    color: $dark-navy;
-    position: relative;
+	font-size: 36px;
+	cursor: pointer;
+	transition: $transition;
+	position: relative;
+	padding: 6px;
+	background-color: $dark-slate;
+	border-radius: 6px;
+	color: $dark-navy;
+	position: relative;
 
-    &:hover {
-        transform: translateY(-3px);
-        background-color: $malachite-green;
-    }
+	&:hover {
+		transform: translateY(-3px);
+		background-color: $malachite-green;
+	}
 
-    @media ($mobileL) {
-        font-size: 28px;
-    }
+	@media ($mobileL) {
+        padding: 4px;
+		font-size: 20px !important;
+	}
 }
-    
+
 .caretR {
-    position: absolute;
-    color: $malachite-green;
-    top: 50%;
-    left: -35px;
-    transform: translateY(-50%);
-   
-    @media ($mobileL) {
-        left: -25px;
-    }
+	position: absolute;
+	color: $malachite-green;
+	top: 50%;
+	left: -35px;
+	transform: translateY(-50%);
+
+	@media ($mobileL) {
+		left: -25px;
+	}
 }
