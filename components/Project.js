@@ -18,7 +18,12 @@ const Project = ({ name, description, url, repository, image, stack }) => {
 	return (
 		<div className={styles.project_wrapper}>
 			<div className={styles.project_image_wrapper}>
-				<Image src={image} width={850} height={550} alt={''} />
+				<Image
+					src={image}
+					width={850}
+					height={450}
+					alt={''}
+				/>
 			</div>
 			{!isMobile ? (
 				<motion.div

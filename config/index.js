@@ -257,6 +257,25 @@ module.exports = {
 			],
 		},
 		{
+			name: 'Github Dashboard',
+			description:
+				'An application for you to easily get the information you seek on your favorite Github users',
+			url: 'https://github-dashboard.herokuapp.com/',
+			repository: 'https://github.com/romulororiz/github-dashboard',
+			image: '/assets/projects/ghub-dashboard.jpg',
+			stack: [
+				'React',
+				'·',
+				'Express',
+				'·',
+				'Context API',
+				'·',
+				'Sass',
+				'·',
+				'Heroku',
+			],
+		},
+		{
 			name: 'Rick and Morty Characteropedia',
 			description:
 				'A Rick and Morty Hub for you to easily get the information you seek on your favorite characters of the best show ever made',
