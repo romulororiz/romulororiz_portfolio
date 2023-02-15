@@ -1,130 +1,133 @@
 @import 'variables', 'mixins';
 
 .projects {
-    @include flexCenter;
-    flex-direction: column;
-    min-height: 100vh;
+	@include flexCenter;
+	flex-direction: column;
+	min-height: 100vh;
 
-    h1 {
-        @include heading;
-        @include headingLine;
-        width: 100%;
+	h1 {
+		@include heading;
+		@include headingLine;
+		width: 100%;
 
-        &::before {
-            width: 140px;
-        }
+		&::before {
+			width: 140px;
+		}
 
-        span {
-            @include headingTextOverLine;
-            left: 140px;
-        }
-    }
+		span {
+			@include headingTextOverLine;
+			left: 140px;
+		}
+	}
 }
 
 .carousel {
-    margin-top: 35px;
-    @include flexCenter;
-    position: relative;
-    width: 100%;
-    height: auto;
+	margin-top: 35px;
+	@include flexCenter;
+	position: relative;
+	width: 100%;
+	height: auto;
 
-    &:hover::after {
-        opacity: 1;
-    }
+	&:hover::after {
+		opacity: 1;
+	}
 
-    &:hover .carousel_slide::after {
-        background-color: transparent;
-    }
+	&:hover .carousel_slide::after {
+		background-color: transparent;
+	}
 }
 
 .carousel_viewport {
-    overflow: hidden;
+	overflow: hidden;
 }
 
 .carousel_container {
-    display: flex;
+	display: flex;
 }
 
 .carousel_slide {
-    position: relative;
-    flex: 0 0 100%;
-    border-radius: 8px;
-    cursor: grab;
-    display: flex;
+	position: relative;
+	flex: 0 0 100%;
+	border-radius: 8px;
+	cursor: grab;
+	display: flex;
 
-    &:active {
-        cursor: grabbing;
-    }
+	&:active {
+		cursor: grabbing;
+	}
 }
 
 .carousel_btns {
-    position: absolute;
-    bottom: -130px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 140px;
-    display: flex;
-    justify-content: space-around;
+	position: absolute;
+	bottom: -130px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 140px;
+	display: flex;
+	justify-content: space-around;
 
-    .embla_prev_disabled,
-    .embla_next_disabled {
-        pointer-events: none;
-        opacity: .15 !important;
-    }
+	.embla_prev_disabled,
+	.embla_next_disabled {
+		pointer-events: none;
+		opacity: 0.15 !important;
+	}
 
-    .icon {
-        opacity: .35;
-        font-size: 48px;
-        cursor: pointer;
-        color: $malachite-green;
-        transition: $transition;
+	.icon {
+		opacity: 0.35;
+		font-size: 48px;
+		cursor: pointer;
+		color: $malachite-green;
+		transition: $transition;
 
-        &:hover {
-            opacity: 1;
-        }
-    }
+		&:hover {
+			opacity: 1;
+		}
+	}
 }
 
 .carousel_dots {
-    position: absolute;
-    display: flex;
-    width: 25%;
-    bottom: -50px;
-    justify-content: space-around;
+	position: absolute;
+	display: flex;
+	width: 25%;
+	bottom: -50px;
+	justify-content: space-around;
 }
 
 @media ($desktopXS) {
-    .carousel_btns {
-        bottom: -115px;
-
-    }
+	.carousel_btns {
+		bottom: -115px;
+	}
 }
 
 @media ($mobileL) {
-    .projects h1 {
-        font-size: $font-xxl;
+	.projects {
+        min-height: 50vh;
 
-        &::before {
-            width: 100px;
-        }
+		h1 {
+			font-size: $font-xxl;
 
-        span {
-            @include headingTextOverLine;
-            left: 100px;
-            top: -3px !important;
-            font-size: $font-xxs !important;
-        }
-    }
+			&::before {
+				width: 100px;
+			}
 
-    .carousel_btns {
-        width: 100px;
-        
-        .icon {
-            font-size: 38px;
-        }
-    }
+			span {
+				@include headingTextOverLine;
+				left: 100px;
+				top: -3px !important;
+				font-size: $font-xxs !important;
+			}
+		}
+	}
 
-    .carousel_dots {
-        bottom: -40px;
-    }
+	.carousel_btns {
+		width: 100px;
+
+		.icon {
+			font-size: 38px;
+		}
+	}
+
+	.carousel_dots {
+		bottom: -40px;
+	}
 }

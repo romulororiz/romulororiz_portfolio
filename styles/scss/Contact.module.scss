@@ -156,7 +156,8 @@
 }
 
 .contactForm input[type='submit']:hover {
-   background-color: rgba($malachite-green, 0.25);
+   background-color: $malachite-green;
+    color: #fff;
 }
 
 .messageSent {
@@ -207,5 +208,11 @@
 
     .contactForm {
         margin-top: 15px;
+    }
+
+    .messageSent {
+        p {
+            font-size: $font-md;
+        }
     }
 }
