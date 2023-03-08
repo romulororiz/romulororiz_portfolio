@@ -183,6 +183,25 @@ module.exports = {
 			],
 		},
 		{
+			name: 'Kanban Task Manager',
+			description:
+				'A Fullstack Kanban Application, in which users are able to authenticate, create boards and tasks, and manage them accordingly.',
+			url: 'https://kanban-task-mngmt.herokuapp.com/',
+			repository: 'https://github.com/romulororiz/Kanban-Task-Management',
+			image: '/assets/projects/kanban-task-mngmt.jpg',
+			stack: [
+				'React',
+				'·',
+				'Sass',
+				'·',
+				'Express',
+				'·',
+				'MongoDB',
+				'·',
+				'Heroku',
+			],
+		},
+		{
 			name: 'A Vida + Rica',
 			description:
 				'A financial blog specialized in Investing, Personal Finances and Entrepreneurship.',
