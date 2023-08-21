@@ -32,7 +32,7 @@ const Footer = () => {
 						</a>
 					))}
 			</div>
-			<p>&copy; Romulo Roriz 2022</p>
+			<p>&copy; Romulo Roriz {new Date().getFullYear()}</p>
 		</motion.div>
 	);
 };
