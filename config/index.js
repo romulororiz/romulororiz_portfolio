@@ -120,12 +120,6 @@ module.exports = {
 			name: 'Css3',
 		},
 		{
-			name: 'Sass',
-		},
-		{
-			name: 'Styled Components',
-		},
-		{
 			name: 'Tailwind',
 		},
 		{
@@ -157,6 +151,9 @@ module.exports = {
 		},
 		{
 			name: 'GraphQL',
+		},
+		{
+			name: 'Typescript',
 		},
 		{
 			name: 'Express',
@@ -212,47 +209,20 @@ module.exports = {
 			stack: ['NextJs', '·', 'Sass', '·', 'Vercel'],
 		},
 		{
-			name: 'Kunden Tracker',
+			name: 'Spotify Connected',
 			description:
-				'A Simple looking CMS Platform for you to keep track of your customers',
-			url: 'https://kunden-tracker.herokuapp.com/',
-			repository: 'https://github.com/romulororiz/kunden-tracker',
-			image: '/assets/projects/kunden-tracker.jpg',
-			stack: [
-				'MongoDB ',
-				'·',
-				'Express ',
-				'·',
-				'React ',
-				'·',
-				'NodeJs ',
-				'·',
-				'Redux Toolkit ',
-				'·',
-				'Sass',
-				'·',
-				'Heroku',
-			],
-		},
-		{
-			name: 'WeatherIo',
-			description:
-				'A Simple looking weather application I have built to have a more in-depth understanding of GraphQL / Apollo Server / Apollo Client',
-			url: 'https://weatherioapp.herokuapp.com/',
-			repository: 'https://github.com/romulororiz/weatherio',
-			image: '/assets/projects/weatherIo.jpg',
+				'A Web App that allows you to connect to your Spotify account and get information about your favorite artists and songs',
+			url: 'https://spotify-connected.herokuapp.com/',
+			repository: 'https://github.com/romulororiz/spotify-connected',
+			image: '/assets/projects/spotify-connected.png',
 			stack: [
 				'React',
 				'·',
 				'Express',
 				'·',
-				'Apollo Server',
-				'·',
-				'GraphQL',
-				'·',
 				'Apollo Client',
 				'·',
-				'Sass',
+				'Styled Components',
 				'·',
 				'Heroku',
 			],

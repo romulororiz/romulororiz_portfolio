@@ -24,9 +24,11 @@ import {
 	SiVercel,
 	SiTailwindcss,
 	SiGraphql,
+	SiTypescript
 } from 'react-icons/si';
 import { BsCaretRight } from 'react-icons/bs';
 import styles from '@/styles/Icon.module.scss';
+import Image from 'next/image';
 
 const Icon = ({ name }) => {
 	switch (name) {
@@ -72,6 +74,8 @@ const Icon = ({ name }) => {
 			return <SiVercel className={styles.icon} />;
 		case 'Tailwind':
 			return <SiTailwindcss className={styles.icon} />;
+		case 'Typescript':
+			return <SiTypescript className={styles.icon} />;
 		case 'Email':
 			return <FaAt className={styles.social_icon} />;
 		case 'External':
